@@ -1,0 +1,4 @@
+private.pem
+license_token.txt
+*.env*
+!.env.example
