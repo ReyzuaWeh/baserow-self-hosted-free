@@ -1,4 +1,4 @@
-# BAS-1: Generate Key Pair and Self Signed
+# BAS-2: Generate Key Pair and Self Signed
 *CODE:DEV-886*
 
 ## Overview
@@ -54,6 +54,19 @@ Has been covered in script
 python verify.py
 ```
 - Expected: Get `SUCCESS` and `FAILED` result test. `SUCCESS` for the generated license. `FAILED` for the tampered one
+
+### Action Screenshots
+1. Create pem
+
+![Run `python create_pem.py`](./screenshots/02-create-pem.png)
+
+2. Create license
+
+![Run `python create_license.py`](./screenshots/03-create-license.png)
+
+3. Verify
+
+![Run `python verify.py`](./screenshots/04-verify-result.png)
 
 ## Struggles While Develops
 1. Can't use AI directly
