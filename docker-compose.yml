@@ -9,6 +9,10 @@ services:
       - "443:443"
     volumes:
       - baserow_data:/baserow/data
+      - ./public.pem:/baserow/premium/backend/src/baserow_premium/public_key.pem
+      - ./public.pem:/baserow/premium/backend/src/baserow_premium/public_key_debug.pem
+    extra_hosts:  
+    - "api.baserow.io:172.17.0.1"  
 
 volumes:
   baserow_data:

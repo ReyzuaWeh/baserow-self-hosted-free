@@ -1,0 +1,1049 @@
+baserow  | [32m [STARTUP][2026-11-01 15:53:40] [32mNo DATABASE_HOST or DATABASE_URL provided, using embedded postgres.[0m (B[m 
+baserow  | [32m [STARTUP][2026-11-01 15:53:40] [32mUsing embedded baserow redis as no REDIS_HOST or REDIS_URL provided. [0m (B[m 
+baserow  | [32m [STARTUP][2026-11-01 15:53:40] [32mImporting REDIS_PASSWORD secret from /baserow/data/.redispass[0m (B[m 
+baserow  | [32m [STARTUP][2026-11-01 15:53:40] [32mImporting SECRET_KEY secret from /baserow/data/.secret[0m (B[m 
+baserow  | [32m [STARTUP][2026-11-01 15:53:40] [32mImporting BASEROW_JWT_SIGNING_KEY secret from /baserow/data/.jwt_signing_key[0m (B[m 
+baserow  | [32m [STARTUP][2026-11-01 15:53:40] [32mImporting DATABASE_PASSWORD secret from /baserow/data/.pgpass[0m (B[m 
+baserow  | =========================================================================================
+baserow  | 
+baserow  | ██████╗  █████╗ ███████╗███████╗██████╗  ██████╗ ██╗    ██╗
+baserow  | ██╔══██╗██╔══██╗██╔════╝██╔════╝██╔══██╗██╔═══██╗██║    ██║
+baserow  | ██████╔╝███████║███████╗█████╗  ██████╔╝██║   ██║██║ █╗ ██║
+baserow  | ██╔══██╗██╔══██║╚════██║██╔══╝  ██╔══██╗██║   ██║██║███╗██║
+baserow  | ██████╔╝██║  ██║███████║███████╗██║  ██║╚██████╔╝╚███╔███╔╝
+baserow  | ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝ ╚═════╝  ╚══╝╚══╝
+baserow  | 
+baserow  | Version 2.4.1
+baserow  | 
+baserow  | =========================================================================================
+baserow  | Welcome to Baserow. See https://baserow.io/installation/install-with-docker/ for detailed instructions on 
+baserow  | how to use this Docker image.
+baserow  | [32m [STARTUP][2026-11-01 15:53:41] [32mRunning setup of embedded baserow database.[0m (B[m 
+baserow  | [32m [POSTGRES_INIT][2026-11-01 15:53:41] Becoming postgres superuser to run setup SQL commands: (B[m 
+baserow  | [32m [POSTGRES_INIT][2026-11-01 15:53:41]  (B[m 
+baserow  | [32m [POSTGRES_INIT][2026-11-01 15:53:41] PostgreSQL Database directory appears to contain a database; Skipping initialization (B[m 
+baserow  | [32m [POSTGRES_INIT][2026-11-01 15:53:41]  (B[m 
+baserow  | [32m [STARTUP][2026-11-01 15:53:41] [32mNo BASEROW_PUBLIC_URL environment variable provided. Starting baserow locally at http://localhost without automatic https.[0m (B[m 
+baserow  | [32m [STARTUP][2026-11-01 15:53:41] [32mStarting all Baserow processes:[0m (B[m 
+baserow  | 2026-11-01 15:53:41,660 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+baserow  | 2026-11-01 15:53:41,660 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+baserow  | 2026-11-01 15:53:41,660 INFO Included extra file "/baserow/supervisor/includes/enabled/embedded-postgres.conf" during parsing
+baserow  | 2026-11-01 15:53:41,660 INFO Included extra file "/baserow/supervisor/includes/enabled/embedded-postgres.conf" during parsing
+baserow  | 2026-11-01 15:53:41,660 INFO Included extra file "/baserow/supervisor/includes/enabled/embedded-redis.conf" during parsing
+baserow  | 2026-11-01 15:53:41,660 INFO Included extra file "/baserow/supervisor/includes/enabled/embedded-redis.conf" during parsing
+baserow  | 2026-11-01 15:53:41,662 INFO supervisord started with pid 1
+baserow  | 2026-11-01 15:53:41,662 INFO supervisord started with pid 1
+baserow  | 2026-11-01 15:53:42,665 INFO spawned: 'processes' with pid 156
+baserow  | 2026-11-01 15:53:42,665 INFO spawned: 'processes' with pid 156
+baserow  | 2026-11-01 15:53:42,667 INFO spawned: 'baserow-watcher' with pid 157
+baserow  | 2026-11-01 15:53:42,667 INFO spawned: 'baserow-watcher' with pid 157
+baserow  | 2026-11-01 15:53:42,670 INFO spawned: 'caddy' with pid 158
+baserow  | 2026-11-01 15:53:42,670 INFO spawned: 'caddy' with pid 158
+baserow  | 2026-11-01 15:53:42,674 INFO spawned: 'postgresql' with pid 159
+baserow  | 2026-11-01 15:53:42,674 INFO spawned: 'postgresql' with pid 159
+baserow  | 2026-11-01 15:53:42,679 INFO spawned: 'redis' with pid 160
+baserow  | 2026-11-01 15:53:42,679 INFO spawned: 'redis' with pid 160
+baserow  | 2026-11-01 15:53:42,686 INFO spawned: 'backend' with pid 163
+baserow  | 2026-11-01 15:53:42,686 INFO spawned: 'backend' with pid 163
+baserow  | 2026-11-01 15:53:42,693 INFO spawned: 'celeryworker' with pid 166
+baserow  | 2026-11-01 15:53:42,693 INFO spawned: 'celeryworker' with pid 166
+baserow  | 2026-11-01 15:53:42,697 INFO spawned: 'exportworker' with pid 172
+baserow  | 2026-11-01 15:53:42,697 INFO spawned: 'exportworker' with pid 172
+baserow  | 2026-11-01 15:53:42,701 INFO spawned: 'webfrontend' with pid 177
+baserow  | 2026-11-01 15:53:42,701 INFO spawned: 'webfrontend' with pid 177
+baserow  | 2026-11-01 15:53:42,707 INFO spawned: 'beatworker' with pid 179
+baserow  | 2026-11-01 15:53:42,707 INFO spawned: 'beatworker' with pid 179
+baserow  | 2026-11-01 15:53:42,708 INFO reaped unknown pid 155 (exit status 0)
+baserow  | 2026-11-01 15:53:42,708 INFO reaped unknown pid 155 (exit status 0)
+baserow  | [35m [REDIS][2026-11-01 15:53:42] 160:C 01 Nov 2026 15:53:42.785 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect. (B[m 
+baserow  | [35m [REDIS][2026-11-01 15:53:42] 160:C 01 Nov 2026 15:53:42.785 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo (B[m 
+baserow  | [35m [REDIS][2026-11-01 15:53:42] 160:C 01 Nov 2026 15:53:42.785 * Redis version=8.10.2, bits=64, commit=00000000, modified=1, pid=160, just started (B[m 
+baserow  | [35m [REDIS][2026-11-01 15:53:42] 160:C 01 Nov 2026 15:53:42.785 * Configuration loaded (B[m 
+baserow  | [35m [REDIS][2026-11-01 15:53:42] 160:M 01 Nov 2026 15:53:42.789 * Increased maximum number of open files to 10032 (it was originally set to 1024). (B[m 
+baserow  | [35m [REDIS][2026-11-01 15:53:42] 160:M 01 Nov 2026 15:53:42.789 * monotonic clock: POSIX clock_gettime (B[m 
+baserow  | [35m [REDIS][2026-11-01 15:53:42] 160:M 01 Nov 2026 15:53:42.797 * Running mode=standalone, port=6379. (B[m 
+baserow  | [35m [REDIS][2026-11-01 15:53:42] 160:M 01 Nov 2026 15:53:42.802 * Server initialized (B[m 
+baserow  | [35m [REDIS][2026-11-01 15:53:42] 160:M 01 Nov 2026 15:53:42.806 * Loading RDB produced by version 8.10.2 (B[m 
+baserow  | [35m [REDIS][2026-11-01 15:53:42] 160:M 01 Nov 2026 15:53:42.807 * RDB age 350 seconds (B[m 
+baserow  | [35m [REDIS][2026-11-01 15:53:42] 160:M 01 Nov 2026 15:53:42.807 * RDB memory usage when created 3.77 Mb (B[m 
+baserow  | [35m [REDIS][2026-11-01 15:53:42] 160:M 01 Nov 2026 15:53:42.826 * Done loading RDB, keys loaded: 1560, keys expired: 51. (B[m 
+baserow  | [35m [REDIS][2026-11-01 15:53:42] 160:M 01 Nov 2026 15:53:42.826 * DB loaded from disk: 0.023 seconds (B[m 
+baserow  | [35m [POSTGRES][2026-11-01 15:53:42] 2026-11-01 15:53:42.854 UTC [159] LOG:  starting PostgreSQL 15.19 (Debian 15.19-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit (B[m 
+baserow  | [35m [POSTGRES][2026-11-01 15:53:42] 2026-11-01 15:53:42.855 UTC [159] LOG:  listening on IPv6 address "::1", port 5432 (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:53:42] OTEL_RESOURCE_ATTRIBUTES=service.namespace=Baserow,service.version=2.4.1,deployment.environment=unknown (B[m 
+baserow  | [35m [POSTGRES][2026-11-01 15:53:42] 2026-11-01 15:53:42.855 UTC [159] LOG:  listening on IPv4 address "127.0.0.1", port 5432 (B[m 
+baserow  | [35m [POSTGRES][2026-11-01 15:53:42] 2026-11-01 15:53:42.867 UTC [159] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432" (B[m 
+baserow  | [35m [CADDY][2026-11-01 15:53:43] {"level":"info","ts":1793548423.1918414,"msg":"maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined"} (B[m 
+baserow  | [35m [CADDY][2026-11-01 15:53:43] {"level":"info","ts":1793548423.1922476,"msg":"GOMEMLIMIT is updated","GOMEMLIMIT":3597812121,"previous":9223372036854775807} (B[m 
+baserow  | [35m [CADDY][2026-11-01 15:53:43] {"level":"info","ts":1793548423.1922567,"msg":"using config from file","file":"/baserow/caddy/Caddyfile"} (B[m 
+baserow  | [35m [CADDY][2026-11-01 15:53:43] {"level":"info","ts":1793548423.1922605,"msg":"adapted config to JSON","adapter":"caddyfile"} (B[m 
+baserow  | [35m [CADDY][2026-11-01 15:53:43] {"level":"warn","ts":1793548423.1922636,"msg":"Caddyfile input is not formatted; run 'caddy fmt --overwrite' to fix inconsistencies","adapter":"caddyfile","file":"/baserow/caddy/Caddyfile","line":3} (B[m 
+baserow  | [35m [CADDY][2026-11-01 15:53:43] {"level":"info","ts":1793548423.1941626,"logger":"admin","msg":"admin endpoint started","address":"localhost:2019","enforce_origin":false,"origins":["//localhost:2019","//[::1]:2019","//127.0.0.1:2019"]} (B[m 
+baserow  | [35m [CADDY][2026-11-01 15:53:43] {"level":"info","ts":1793548423.2037694,"logger":"tls.cache.maintenance","msg":"started background certificate maintenance","cache":"0x2f3ece8a0380"} (B[m 
+baserow  | [35m [CADDY][2026-11-01 15:53:43] {"level":"warn","ts":1793548423.2394867,"logger":"http.auto_https","msg":"server is listening only on the HTTP port, so no automatic HTTPS will be applied to this server","server_name":"srv0","http_port":80} (B[m 
+baserow  | [35m [CADDY][2026-11-01 15:53:43] {"level":"warn","ts":1793548423.2456584,"logger":"http","msg":"HTTP/2 skipped because it requires TLS","network":"tcp","addr":":80"} (B[m 
+baserow  | [35m [CADDY][2026-11-01 15:53:43] {"level":"warn","ts":1793548423.2463837,"logger":"http","msg":"HTTP/3 skipped because it requires TLS","network":"tcp","addr":":80"} (B[m 
+baserow  | [35m [CADDY][2026-11-01 15:53:43] {"level":"info","ts":1793548423.2463992,"logger":"http.log","msg":"server running","name":"srv0","protocols":["h1","h2","h3"]} (B[m 
+baserow  | [35m [CADDY][2026-11-01 15:53:43] {"level":"info","ts":1793548423.2483282,"msg":"autosaved config (load with --resume flag)","file":"/baserow/data/caddy/config/caddy/autosave.json"} (B[m 
+baserow  | [35m [CADDY][2026-11-01 15:53:43] {"level":"info","ts":1793548423.248361,"msg":"serving initial configuration"} (B[m 
+baserow  | [35m [CADDY][2026-11-01 15:53:43] {"level":"info","ts":1793548423.2565935,"logger":"tls","msg":"storage cleaning happened too recently; skipping for now","storage":"FileStorage:/baserow/data/caddy/data/caddy","instance":"ed232b74-803e-4d08-a01b-ad9c6e99df7e","try_again":1793634823.2565894,"try_again_in":86399.999999099} (B[m 
+baserow  | [35m [POSTGRES][2026-11-01 15:53:43] 2026-11-01 15:53:42.896 UTC [336] LOG:  database system was interrupted; last known up at 2026-11-01 15:47:50 UTC (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:53:43] OTEL_RESOURCE_ATTRIBUTES=service.namespace=Baserow,service.version=2.4.1,deployment.environment=unknown (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:53:43] Error: Failed to connect to the postgresql database at localhost (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:53:43] Please see the error below for more details: (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:53:43] connection to server at "localhost" (::1), port 5432 failed: FATAL:  the database system is starting up (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:53:43]  (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:53:43] Trying again without any DATABASE_OPTIONS: (B[m 
+baserow  | [35m [POSTGRES][2026-11-01 15:53:43] 2026-11-01 15:53:43.520 UTC [343] baserow@baserow FATAL:  the database system is starting up (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:53:43] Error: Failed to connect to the postgresql database at localhost without the  (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:53:43] Please see the error below for more details: (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:53:43] connection to server at "localhost" (::1), port 5432 failed: FATAL:  the database system is starting up (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:53:43]  (B[m 
+baserow  | 2026-11-01 15:53:44,621 INFO success: processes entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+baserow  | 2026-11-01 15:53:44,621 INFO success: processes entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+baserow  | 2026-11-01 15:53:44,621 INFO success: baserow-watcher entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+baserow  | 2026-11-01 15:53:44,621 INFO success: baserow-watcher entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+baserow  | [35m [POSTGRES][2026-11-01 15:53:44] 2026-11-01 15:53:43.571 UTC [344] baserow@baserow FATAL:  the database system is starting up (B[m 
+baserow  | [35m [POSTGRES][2026-11-01 15:53:44] 2026-11-01 15:53:44.813 UTC [336] LOG:  database system was not properly shut down; automatic recovery in progress (B[m 
+baserow  | [35m [POSTGRES][2026-11-01 15:53:44] 2026-11-01 15:53:44.859 UTC [336] LOG:  redo starts at 0/ED5ACB0 (B[m 
+baserow  | [35m [POSTGRES][2026-11-01 15:53:44] 2026-11-01 15:53:44.877 UTC [336] LOG:  invalid record length at 0/EE1CBF8: wanted 24, got 0 (B[m 
+baserow  | [35m [POSTGRES][2026-11-01 15:53:44] 2026-11-01 15:53:44.877 UTC [336] LOG:  redo done at 0/EE1CBC0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.01 s (B[m 
+baserow  | [35m [POSTGRES][2026-11-01 15:53:44] 2026-11-01 15:53:44.938 UTC [334] LOG:  checkpoint starting: end-of-recovery immediate wait (B[m 
+baserow  | [35m [POSTGRES][2026-11-01 15:53:44] 2026-11-01 15:53:44.977 UTC [334] LOG:  checkpoint complete: wrote 172 buffers (1.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.012 s, sync=0.014 s, total=0.042 s; sync files=101, longest=0.007 s, average=0.001 s; distance=775 kB, estimate=775 kB (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:53:46] Waiting for PostgreSQL to become available attempt  0/5 ... (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:53:46] PostgreSQL is available (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:53:53] python /baserow/backend/src/baserow/manage.py locked_migrate (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:53:53] OTEL_RESOURCE_ATTRIBUTES=service.namespace=Baserow,service.version=2.4.1,deployment.environment=unknown (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:53:53] OTEL_RESOURCE_ATTRIBUTES=service.namespace=Baserow,service.version=2.4.1,deployment.environment=unknown (B[m 
+baserow  | [1m [BASEROW-WATCHER][2026-11-01 15:53:57] Waiting for Baserow to become available, this might take 30+ seconds... (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:03] Sleeping for 15 before starting beat to prevent  startup errors. (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05] 166|2026-11-01 15:53:53.640|INFO|baserow.core.telemetry.telemetry:setup_logging:85 - Logger setup. (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]  -------------- default-worker@67bbd65f9558 v5.6.2 (recovery) (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05] --- ***** -----  (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05] -- ******* ---- Linux-6.18.39-x86_64-with-glibc2.41 2026-11-01 15:54:05 (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05] - *** --- * ---  (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05] - ** ---------- [config] (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05] - ** ---------- .> app:         baserow:0x7f612e7da120 (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05] - ** ---------- .> transport:   redis://:**@localhost:6379/0 (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05] - ** ---------- .> results:     redis://:**@localhost:6379/0 (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05] - *** --- * --- .> concurrency: 1 (prefork) (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05] -- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker) (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05] --- ***** -----  (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]  -------------- [queues] (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]                 .> automation_workflow exchange=automation_workflow(direct) key=automation_workflow (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]                 .> celery           exchange=celery(direct) key=celery (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]  (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05] [tasks] (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.automation.nodes.tasks.dispatch_node_celery_task (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.automation.nodes.tasks.resume_deferred_node_celery_task (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.automation.workflows.tasks.automation_periodic_cleanup (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.automation.workflows.tasks.handle_workflow_dispatch_done (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.automation.workflows.tasks.start_workflow_celery_task (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.data_sync.tasks.two_way_sync_row_created (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.data_sync.tasks.two_way_sync_row_deleted (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.data_sync.tasks.two_way_sync_row_updated (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.export.tasks.clean_up_old_jobs (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.export.tasks.run_export_job (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.fields.tasks.delete_mentions_marked_for_deletion (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.fields.tasks.finish_periodic_fields_update (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.fields.tasks.notify_table_views_updates (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.fields.tasks.run_periodic_fields_updates (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.fields.tasks.update_workspaces_periodic_fields (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.rows.tasks.clean_up_row_history_entries (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.search.tasks.periodic_check_pending_search_data (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.search.tasks.schedule_update_search_data (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.search.tasks.update_search_data (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.table.tasks.create_tables_usage_for_new_database (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.table.tasks.setup_created_by_and_last_modified_by_column (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.table.tasks.setup_m2m_field_indexes_if_not_exist (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.table.tasks.unsubscribe_user_from_tables_when_removed_from_workspace (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.table.tasks.update_table_usage (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.views.tasks._check_for_pending_view_index_updates (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.views.tasks.periodic_check_for_views_with_time_sensitive_filters (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.views.tasks.update_view_index (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.webhooks.tasks.call_webhook (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.ws.rows.tasks.broadcast_dependant_rows_updated (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.integrations.tasks.call_periodic_services_that_are_due (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.contrib.integrations.tasks.delete_inbound_email_receiver_message (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.action.tasks.cleanup_old_actions (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.import_export.tasks.delete_marked_import_export_resources (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.import_export.tasks.mark_import_export_resources_for_deletion (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.jobs.tasks.clean_up_jobs (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.jobs.tasks.run_async_job (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.last_viewed.tasks.clean_up_stale_last_viewed_items (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.last_viewed.tasks.mark_item_viewed (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.notifications.tasks.send_daily_and_weekly_notifications_summary_by_email (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.notifications.tasks.send_queued_notifications_to_users (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.notifications.tasks.singleton_send_instant_notifications_summary_by_email (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.snapshots.tasks.delete_application_snapshot (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.snapshots.tasks.delete_expired_snapshots (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.tasks.sync_templates_task (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.trash.tasks.mark_old_trash_for_permanent_deletion (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.trash.tasks.permanently_delete_marked_trash (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.usage.tasks.run_calculate_storage (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.user.tasks.check_pending_account_deletion (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.user.tasks.clean_up_user_log_entry (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.user.tasks.flush_expired_tokens (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.core.user.tasks.share_onboarding_details_with_baserow (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.broadcast_ai_provider_update (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.broadcast_application_created (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.broadcast_many_to_channel_group (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.broadcast_to_channel_group (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.broadcast_to_group (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.broadcast_to_groups (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.broadcast_to_permitted_users (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.broadcast_to_users (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.broadcast_to_users_individual_payloads (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.cleanup_old_realtime_events (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.force_disconnect_users (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.application_users.tasks.check_application_user_limits (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.assistant.tasks.delete_old_unrated_predictions (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.assistant.tasks.sync_assistant_knowledge_base (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.audit_log.tasks.clean_up_audit_log_entries (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.data_scanner.tasks.check_data_scans_due (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.data_scanner.tasks.run_data_scan (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.data_sync.tasks.sync_periodic_data_sync (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.date_dependency.tasks.date_dependency_recalculate_rows (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.tasks.count_all_user_source_users (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.tasks.unsubscribe_subject_from_tables_currently_subscribed_to_task (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow_premium.fields.tasks.generate_scheduled_ai_field_generation (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow_premium.fields.tasks.schedule_ai_field_generation (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow_premium.license.tasks.license_check (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . baserow_premium.usage.tasks.run_calculate_seats (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05] 172|2026-11-01 15:53:53.648|INFO|baserow.core.telemetry.telemetry:setup_logging:85 - Logger setup. (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]  -------------- export-worker@67bbd65f9558 v5.6.2 (recovery) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05] --- ***** -----  (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05] -- ******* ---- Linux-6.18.39-x86_64-with-glibc2.41 2026-11-01 15:54:05 (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05] - *** --- * ---  (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05] - ** ---------- [config] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05] - ** ---------- .> app:         baserow:0x784752fea120 (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05] - ** ---------- .> transport:   redis://:**@localhost:6379/0 (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05] - ** ---------- .> results:     redis://:**@localhost:6379/0 (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05] - *** --- * --- .> concurrency: 1 (prefork) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05] -- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05] --- ***** -----  (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]  -------------- [queues] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]                 .> export           exchange=export(direct) key=export (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]                  (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]  (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05] [tasks] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.automation.nodes.tasks.dispatch_node_celery_task (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.automation.nodes.tasks.resume_deferred_node_celery_task (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.automation.workflows.tasks.automation_periodic_cleanup (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.automation.workflows.tasks.handle_workflow_dispatch_done (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.automation.workflows.tasks.start_workflow_celery_task (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.data_sync.tasks.two_way_sync_row_created (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.data_sync.tasks.two_way_sync_row_deleted (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.data_sync.tasks.two_way_sync_row_updated (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.export.tasks.clean_up_old_jobs (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.export.tasks.run_export_job (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.fields.tasks.delete_mentions_marked_for_deletion (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.fields.tasks.finish_periodic_fields_update (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.fields.tasks.notify_table_views_updates (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.fields.tasks.run_periodic_fields_updates (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.fields.tasks.update_workspaces_periodic_fields (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.rows.tasks.clean_up_row_history_entries (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.search.tasks.periodic_check_pending_search_data (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.search.tasks.schedule_update_search_data (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.search.tasks.update_search_data (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.table.tasks.create_tables_usage_for_new_database (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.table.tasks.setup_created_by_and_last_modified_by_column (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.table.tasks.setup_m2m_field_indexes_if_not_exist (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.table.tasks.unsubscribe_user_from_tables_when_removed_from_workspace (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.table.tasks.update_table_usage (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.views.tasks._check_for_pending_view_index_updates (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.views.tasks.periodic_check_for_views_with_time_sensitive_filters (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.views.tasks.update_view_index (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.webhooks.tasks.call_webhook (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.database.ws.rows.tasks.broadcast_dependant_rows_updated (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.integrations.tasks.call_periodic_services_that_are_due (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.contrib.integrations.tasks.delete_inbound_email_receiver_message (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.action.tasks.cleanup_old_actions (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.import_export.tasks.delete_marked_import_export_resources (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.import_export.tasks.mark_import_export_resources_for_deletion (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.jobs.tasks.clean_up_jobs (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.jobs.tasks.run_async_job (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.last_viewed.tasks.clean_up_stale_last_viewed_items (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.last_viewed.tasks.mark_item_viewed (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.notifications.tasks.send_daily_and_weekly_notifications_summary_by_email (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.notifications.tasks.send_queued_notifications_to_users (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.notifications.tasks.singleton_send_instant_notifications_summary_by_email (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.snapshots.tasks.delete_application_snapshot (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.snapshots.tasks.delete_expired_snapshots (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.tasks.sync_templates_task (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.trash.tasks.mark_old_trash_for_permanent_deletion (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.trash.tasks.permanently_delete_marked_trash (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.usage.tasks.run_calculate_storage (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.user.tasks.check_pending_account_deletion (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.user.tasks.clean_up_user_log_entry (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.user.tasks.flush_expired_tokens (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.core.user.tasks.share_onboarding_details_with_baserow (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.broadcast_ai_provider_update (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.broadcast_application_created (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.broadcast_many_to_channel_group (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.broadcast_to_channel_group (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.broadcast_to_group (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.broadcast_to_groups (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.broadcast_to_permitted_users (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.broadcast_to_users (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.broadcast_to_users_individual_payloads (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.cleanup_old_realtime_events (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow.ws.tasks.force_disconnect_users (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.application_users.tasks.check_application_user_limits (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.assistant.tasks.delete_old_unrated_predictions (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.assistant.tasks.sync_assistant_knowledge_base (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.audit_log.tasks.clean_up_audit_log_entries (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.data_scanner.tasks.check_data_scans_due (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.data_scanner.tasks.run_data_scan (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.data_sync.tasks.sync_periodic_data_sync (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.date_dependency.tasks.date_dependency_recalculate_rows (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.tasks.count_all_user_source_users (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow_enterprise.tasks.unsubscribe_subject_from_tables_currently_subscribed_to_task (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow_premium.fields.tasks.generate_scheduled_ai_field_generation (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow_premium.fields.tasks.schedule_ai_field_generation (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow_premium.license.tasks.license_check (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . baserow_premium.usage.tasks.run_calculate_seats (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:05]   . djcelery_email_send_multiple (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:05]   . djcelery_email_send_multiple (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:05] 351|2026-11-01 15:53:53.639|INFO|baserow.core.telemetry.telemetry:setup_logging:85 - Logger setup. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:05] 351|2026-11-01 15:54:05.945|INFO|baserow.core.management.commands.locked_migrate:acquire_lock:54 - Attempting to lock the postgres advisory lock with id: 123456 You can disable using locked_migrate by default and switch back to the non-locking version by setting BASEROW_DISABLE_LOCKED_MIGRATIONS=true (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:06]  (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:06] [2026-11-01 15:54:06,344: INFO/MainProcess] Connected to redis://:**@localhost:6379/0 (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:06]  (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:06] [2026-11-01 15:54:06,364: INFO/MainProcess] Connected to redis://:**@localhost:6379/0 (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:06] [2026-11-01 15:54:06,362: INFO/MainProcess] mingle: searching for neighbors (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:06] [2026-11-01 15:54:06,394: INFO/MainProcess] mingle: searching for neighbors (B[m 
+baserow  | [1m [BASEROW-WATCHER][2026-11-01 15:54:07] Waiting for Baserow to become available, this might take 30+ seconds... (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:07] [2026-11-01 15:54:06,610: WARNING/ForkPoolWorker-1] Not configuring telemetry due to BASEROW_ENABLE_OTEL not being set. (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:07] [2026-11-01 15:54:06,610: WARNING/ForkPoolWorker-1] Not configuring telemetry due to BASEROW_ENABLE_OTEL not being set. (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:07] [2026-11-01 15:54:07,405: INFO/MainProcess] mingle: all alone (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:07] [2026-11-01 15:54:07,426: INFO/MainProcess] mingle: all alone (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:07] 351|2026-11-01 15:54:05.954|INFO|baserow.core.management.commands.locked_migrate:acquire_lock:65 - Acquired the lock, proceeding with migration. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:07] Operations to perform: (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:08] celery beat v5.6.2 (recovery) is starting. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:08]   Apply all migrations: auth, automation, baserow_enterprise, baserow_premium, builder, contenttypes, core, dashboard, database, db, integrations, sessions, ws (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:08] Clearing Baserow's internal generated model cache... (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:08] Done clearing cache. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:08] Running migrations: (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:10]   No migrations to apply. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:10] Checking pgvector extension: not available. It will be retried on next migration. (B[m 
+baserow  | [35m [POSTGRES][2026-11-01 15:54:10] 2026-11-01 15:53:44.986 UTC [159] LOG:  database system is ready to accept connections (B[m 
+baserow  | [35m [POSTGRES][2026-11-01 15:54:10] 2026-11-01 15:54:10.152 UTC [376] baserow@baserow ERROR:  permission denied to create extension "vector" (B[m 
+baserow  | [35m [POSTGRES][2026-11-01 15:54:10] 2026-11-01 15:54:10.152 UTC [376] baserow@baserow HINT:  Must be superuser to create this extension. (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:10] [2026-11-01 15:54:07,463: INFO/MainProcess] export-worker@67bbd65f9558 ready. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:10] Submitting the sync templates task to run asynchronously in celery after the migration... (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:10] Created 268 operations... (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:10] Deleted 0 un-registered operations... (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:10] [2026-11-01 15:54:10,315: INFO/MainProcess] Task baserow.core.tasks.sync_templates_task[e0368b47-b5b6-404f-89d9-860dd26bfda7] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:10] [2026-11-01 15:54:10,433: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:10] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:   0%|          | 0/158 [00:00<?, ?it/s] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:10] Checking to see if formulas need updating... (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:10]  (B[m [34m [BACKEND][2026-11-01 15:54:10] Syncing default roles:   0%|          | 0/9 [00:00<?, ?it/s] (B[m [34m [BACKEND][2026-11-01 15:54:10] Syncing default roles: 100%|██████████| 9/9 [00:00<00:00, 2950.04it/s] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:10] Skipping assistant knowledge base sync because this instance does not have the `BASEROW_EMBEDDINGS_API_URL` environment variable configured or the PostgreSQL server does not have the pgvector extension. (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:10] 372|2026-11-01 15:54:10.464|INFO|baserow.core.handler:_sync_template:2182 - Importing template policy-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:10] [2026-11-01 15:54:10,715: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:10] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:   1%|          | 1/158 [00:00<00:44,  3.55it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:10] 372|2026-11-01 15:54:10.723|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_finance_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:10] 372|2026-11-01 15:54:10.742|INFO|baserow.core.handler:_sync_template:2182 - Importing template frequent-flyer-rewards (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:10] 372|2026-11-01 15:54:10.758|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_corporate_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:10] 372|2026-11-01 15:54:10.781|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_baserow_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:10] 372|2026-11-01 15:54:10.803|INFO|baserow.core.handler:_sync_template:2182 - Importing template all-fields (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:10] [2026-11-01 15:54:10,819: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:10] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:   4%|3         | 6/158 [00:00<00:08, 18.92it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:10] 372|2026-11-01 15:54:10.822|INFO|baserow.core.handler:_sync_template:2182 - Importing template personal-task-manager (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:10] 372|2026-11-01 15:54:10.848|INFO|baserow.core.handler:_sync_template:2182 - Importing template ooo-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:10] 372|2026-11-01 15:54:10.879|INFO|baserow.core.handler:_sync_template:2182 - Importing template non-profit-organization-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:10] 372|2026-11-01 15:54:10.899|INFO|baserow.core.handler:_sync_template:2182 - Importing template car-maintenance-log (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:10.962|INFO|baserow.core.handler:_sync_template:2182 - Importing template payroll-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] [2026-11-01 15:54:11,002: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:11] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:   7%|6         | 11/158 [00:00<00:06, 22.84it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.005|INFO|baserow.core.handler:_sync_template:2182 - Importing template hotel-bookings (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.027|INFO|baserow.core.handler:_sync_template:2182 - Importing template apartment-hunt (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.066|INFO|baserow.core.handler:_sync_template:2182 - Importing template personal-finance-manager (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.095|INFO|baserow.core.handler:_sync_template:2182 - Importing template applicant-tracker (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] [2026-11-01 15:54:11,111: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:11] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:   9%|9         | 15/158 [00:00<00:05, 26.72it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.113|INFO|baserow.core.handler:_sync_template:2182 - Importing template app-pitch-planner (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.128|INFO|baserow.core.handler:_sync_template:2182 - Importing template car-hunt (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.145|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_startup_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.162|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_ocean_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.183|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_mint_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.230|INFO|baserow.core.handler:_sync_template:2182 - Importing template supply-chain-procurement-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] [2026-11-01 15:54:11,252: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:11] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  13%|#3        | 21/158 [00:00<00:04, 32.23it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.276|INFO|baserow.core.handler:_sync_template:2182 - Importing template business-goal-tracker-okrs (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.312|INFO|baserow.core.handler:_sync_template:2182 - Importing template meeting-room-booking (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.332|INFO|baserow.core.handler:_sync_template:2182 - Importing template non-emergency-call-center (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.368|INFO|baserow.core.handler:_sync_template:2182 - Importing template esg-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] [2026-11-01 15:54:11,392: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:11] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  16%|#5        | 25/158 [00:00<00:04, 31.03it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.399|INFO|baserow.core.handler:_sync_template:2182 - Importing template event-planning (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.421|INFO|baserow.core.handler:_sync_template:2182 - Importing template elementary-school-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.437|INFO|baserow.core.handler:_sync_template:2182 - Importing template teacher-lesson-plans (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.459|INFO|baserow.core.handler:_sync_template:2182 - Importing template customer-research (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.481|INFO|baserow.core.handler:_sync_template:2182 - Importing template purchase-order-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] [2026-11-01 15:54:11,500: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:11] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  19%|#8        | 30/158 [00:01<00:03, 35.07it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.504|INFO|baserow.core.handler:_sync_template:2182 - Importing template remote-team-hub (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.520|INFO|baserow.core.handler:_sync_template:2182 - Importing template political-campaign-contributions (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.534|INFO|baserow.core.handler:_sync_template:2182 - Importing template growth-experiments (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.551|INFO|baserow.core.handler:_sync_template:2182 - Importing template furniture-fixtures-and-equipment-manager (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.566|INFO|baserow.core.handler:_sync_template:2182 - Importing template favorite-food-places (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.582|INFO|baserow.core.handler:_sync_template:2182 - Importing template company-advertising-campaigns (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.602|INFO|baserow.core.handler:_sync_template:2182 - Importing template intake-qualification (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] [2026-11-01 15:54:11,618: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:11] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  23%|##3       | 37/158 [00:01<00:02, 42.18it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.625|INFO|baserow.core.handler:_sync_template:2182 - Importing template interview-questions (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.649|INFO|baserow.core.handler:_sync_template:2182 - Importing template university-admissions-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.668|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_luxury_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.682|INFO|baserow.core.handler:_sync_template:2182 - Importing template email-marketing-campaigns (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.698|INFO|baserow.core.handler:_sync_template:2182 - Importing template content-scheduling-manager (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.725|INFO|baserow.core.handler:_sync_template:2182 - Importing template grocery-planner (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] [2026-11-01 15:54:11,747: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:11] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  27%|##7       | 43/158 [00:01<00:02, 43.49it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.756|INFO|baserow.core.handler:_sync_template:2182 - Importing template trick-or-treat (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.783|INFO|baserow.core.handler:_sync_template:2182 - Importing template software-application-bug-tracker (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.797|INFO|baserow.core.handler:_sync_template:2182 - Importing template wedding-planning (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.812|INFO|baserow.core.handler:_sync_template:2182 - Importing template workshops-and-trainings (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.830|INFO|baserow.core.handler:_sync_template:2182 - Importing template web-app-uat (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.848|INFO|baserow.core.handler:_sync_template:2182 - Importing template podcast-content-manager (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] [2026-11-01 15:54:11,859: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:11] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  31%|###1      | 49/158 [00:01<00:02, 46.31it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.863|INFO|baserow.core.handler:_sync_template:2182 - Importing template wedding-client-planner (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.879|INFO|baserow.core.handler:_sync_template:2182 - Importing template office-guest-log (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.893|INFO|baserow.core.handler:_sync_template:2182 - Importing template hiking-guide (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.920|INFO|baserow.core.handler:_sync_template:2182 - Importing template lightweight-crm (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.944|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_realestate_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] 372|2026-11-01 15:54:11.960|INFO|baserow.core.handler:_sync_template:2182 - Importing template order-kiosk (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:11] [2026-11-01 15:54:11,974: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:11] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  35%|###4      | 55/158 [00:01<00:02, 48.09it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:11.983|INFO|baserow.core.handler:_sync_template:2182 - Importing template formulas (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.010|INFO|baserow.core.handler:_sync_template:2182 - Importing template single-trip-planner (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.036|INFO|baserow.core.handler:_sync_template:2182 - Importing template campaign-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.056|INFO|baserow.core.handler:_sync_template:2182 - Importing template contract-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.079|INFO|baserow.core.handler:_sync_template:2182 - Importing template inspections-compliance (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] [2026-11-01 15:54:12,100: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:12] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  38%|###7      | 60/158 [00:01<00:02, 45.43it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.105|INFO|baserow.core.handler:_sync_template:2182 - Importing template password-reset (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.130|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_midnight_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.153|INFO|baserow.core.handler:_sync_template:2182 - Importing template job-interviews (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.210|INFO|baserow.core.handler:_sync_template:2182 - Importing template holiday-shopping (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.259|INFO|baserow.core.handler:_sync_template:2182 - Importing template project-tracker (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] [2026-11-01 15:54:12,280: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:12] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  41%|####1     | 65/158 [00:01<00:02, 38.56it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.290|INFO|baserow.core.handler:_sync_template:2182 - Importing template house-search (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.328|INFO|baserow.core.handler:_sync_template:2182 - Importing template car-dealership-services (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.429|INFO|baserow.core.handler:_sync_template:2182 - Importing template qa-test-scripts (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.469|INFO|baserow.core.handler:_sync_template:2182 - Importing template program-management-kpi (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.559|INFO|baserow.core.handler:_sync_template:2182 - Importing template electronic-health-record (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] [2026-11-01 15:54:12,601: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:12] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  44%|####4     | 70/158 [00:02<00:03, 27.11it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.607|INFO|baserow.core.handler:_sync_template:2182 - Importing template job-search (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.636|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_education_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.657|INFO|baserow.core.handler:_sync_template:2182 - Importing template company-blog-management (B[m 
+baserow  | 2026-11-01 15:54:12,704 INFO success: caddy entered RUNNING state, process has stayed up for > than 30 seconds (startsecs)
+baserow  | 2026-11-01 15:54:12,704 INFO success: caddy entered RUNNING state, process has stayed up for > than 30 seconds (startsecs)
+baserow  | 2026-11-01 15:54:12,730 INFO success: postgresql entered RUNNING state, process has stayed up for > than 30 seconds (startsecs)
+baserow  | 2026-11-01 15:54:12,730 INFO success: postgresql entered RUNNING state, process has stayed up for > than 30 seconds (startsecs)
+baserow  | 2026-11-01 15:54:12,731 INFO success: redis entered RUNNING state, process has stayed up for > than 30 seconds (startsecs)
+baserow  | 2026-11-01 15:54:12,731 INFO success: redis entered RUNNING state, process has stayed up for > than 30 seconds (startsecs)
+baserow  | 2026-11-01 15:54:12,731 INFO success: backend entered RUNNING state, process has stayed up for > than 30 seconds (startsecs)
+baserow  | 2026-11-01 15:54:12,731 INFO success: backend entered RUNNING state, process has stayed up for > than 30 seconds (startsecs)
+baserow  | 2026-11-01 15:54:12,731 INFO success: celeryworker entered RUNNING state, process has stayed up for > than 30 seconds (startsecs)
+baserow  | 2026-11-01 15:54:12,731 INFO success: celeryworker entered RUNNING state, process has stayed up for > than 30 seconds (startsecs)
+baserow  | 2026-11-01 15:54:12,731 INFO success: exportworker entered RUNNING state, process has stayed up for > than 30 seconds (startsecs)
+baserow  | 2026-11-01 15:54:12,731 INFO success: exportworker entered RUNNING state, process has stayed up for > than 30 seconds (startsecs)
+baserow  | 2026-11-01 15:54:12,731 INFO success: webfrontend entered RUNNING state, process has stayed up for > than 30 seconds (startsecs)
+baserow  | 2026-11-01 15:54:12,731 INFO success: webfrontend entered RUNNING state, process has stayed up for > than 30 seconds (startsecs)
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.679|INFO|baserow.core.handler:_sync_template:2182 - Importing template healthcare-facility-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.718|INFO|baserow.core.handler:_sync_template:2182 - Importing template online-freelancer-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] [2026-11-01 15:54:12,764: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:12] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  47%|####7     | 75/158 [00:02<00:02, 28.03it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.779|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab-testing (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.796|INFO|baserow.core.handler:_sync_template:2182 - Importing template blog-post-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.810|INFO|baserow.core.handler:_sync_template:2182 - Importing template student-planner (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.824|INFO|baserow.core.handler:_sync_template:2182 - Importing template nonprofit-grant-tracker (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.837|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_neon_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.853|INFO|baserow.core.handler:_sync_template:2182 - Importing template swot-analysis (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] [2026-11-01 15:54:12,865: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:12] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  51%|#####1    | 81/158 [00:02<00:02, 34.03it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.868|INFO|baserow.core.handler:_sync_template:2182 - Importing template net-promoter-score (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.885|INFO|baserow.core.handler:_sync_template:2182 - Importing template objectives-key-results (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.900|INFO|baserow.core.handler:_sync_template:2182 - Importing template car-comparison (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.913|INFO|baserow.core.handler:_sync_template:2182 - Importing template venture-capital-investments (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.927|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_healthcare_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.950|INFO|baserow.core.handler:_sync_template:2182 - Importing template action-plan-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] [2026-11-01 15:54:12,968: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:12] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  55%|#####5    | 87/158 [00:02<00:01, 39.25it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:12] 372|2026-11-01 15:54:12.971|INFO|baserow.core.handler:_sync_template:2182 - Importing template bucket-list (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:12.987|INFO|baserow.core.handler:_sync_template:2182 - Importing template benefit-show-manager (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.007|INFO|baserow.core.handler:_sync_template:2182 - Importing template health-inspection-reports (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.020|INFO|baserow.core.handler:_sync_template:2182 - Importing template book-writing-guide (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.034|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_forest_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.057|INFO|baserow.core.handler:_sync_template:2182 - Importing template city-tours (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] [2026-11-01 15:54:13,070: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:13] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  59%|#####8    | 93/158 [00:02<00:01, 43.90it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.093|INFO|baserow.core.handler:_sync_template:2182 - Importing template car-dealership-inventory (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.118|INFO|baserow.core.handler:_sync_template:2182 - Importing template property-showings (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.148|INFO|baserow.core.handler:_sync_template:2182 - Importing template risk-assessment-and-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.169|INFO|baserow.core.handler:_sync_template:2182 - Importing template user-feedback (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.194|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_slate_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] [2026-11-01 15:54:13,211: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:13] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  62%|######2   | 98/158 [00:02<00:01, 41.17it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.216|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_coral_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.236|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_legal_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.254|INFO|baserow.core.handler:_sync_template:2182 - Importing template copy-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.287|INFO|baserow.core.handler:_sync_template:2182 - Importing template ppwr (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.311|INFO|baserow.core.handler:_sync_template:2182 - Importing template moving-company-manager (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] [2026-11-01 15:54:13,321: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:13] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  65%|######5   | 103/158 [00:02<00:01, 42.33it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.328|INFO|baserow.core.handler:_sync_template:2182 - Importing template brand-assets-manager (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.346|INFO|baserow.core.handler:_sync_template:2182 - Importing template competitor-analysis (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.363|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_eclipse_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.379|INFO|baserow.core.handler:_sync_template:2182 - Importing template staff-development (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.394|INFO|baserow.core.handler:_sync_template:2182 - Importing template home-remodeling (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.408|INFO|baserow.core.handler:_sync_template:2182 - Importing template trip-history (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.447|INFO|baserow.core.handler:_sync_template:2182 - Importing template skill-discovery-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] [2026-11-01 15:54:13,481: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:13] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  70%|######9   | 110/158 [00:03<00:01, 42.79it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.486|INFO|baserow.core.handler:_sync_template:2182 - Importing template restaurant-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.504|INFO|baserow.core.handler:_sync_template:2182 - Importing template agile-product-roadmap (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.557|INFO|baserow.core.handler:_sync_template:2182 - Importing template work-management-platform (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.589|INFO|baserow.core.handler:_sync_template:2182 - Importing template media-tracking (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.612|INFO|baserow.core.handler:_sync_template:2182 - Importing template meeting-minutes (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] [2026-11-01 15:54:13,628: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:13] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  73%|#######2  | 115/158 [00:03<00:01, 40.01it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.632|INFO|baserow.core.handler:_sync_template:2182 - Importing template individual-medical-record (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.652|INFO|baserow.core.handler:_sync_template:2182 - Importing template sales-pipeline-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.674|INFO|baserow.core.handler:_sync_template:2182 - Importing template business-conference-event (B[m 
+baserow  | 2026-11-01 15:54:13,690 INFO reaped unknown pid 383 (exit status 0)
+baserow  | 2026-11-01 15:54:13,690 INFO reaped unknown pid 383 (exit status 0)
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.686|INFO|baserow.core.handler:_sync_template:2182 - Importing template call-center-log (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.702|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_ivory_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.723|INFO|baserow.core.handler:_sync_template:2182 - Importing template commercial-property-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] [2026-11-01 15:54:13,737: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:13] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  77%|#######6  | 121/158 [00:03<00:00, 43.78it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.740|INFO|baserow.core.handler:_sync_template:2182 - Importing template company-asset-tracker (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.757|INFO|baserow.core.handler:_sync_template:2182 - Importing template performance-reviews (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.779|INFO|baserow.core.handler:_sync_template:2182 - Importing template public-library-inventory (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.801|INFO|baserow.core.handler:_sync_template:2182 - Importing template new-hire-onboarding (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.816|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_agency_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.828|INFO|baserow.core.handler:_sync_template:2182 - Importing template employee-directory (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] [2026-11-01 15:54:13,840: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:13] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  80%|########  | 127/158 [00:03<00:00, 47.50it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.844|INFO|baserow.core.handler:_sync_template:2182 - Importing template beverage-sales-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.857|INFO|baserow.core.handler:_sync_template:2182 - Importing template book-catalog (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.876|INFO|baserow.core.handler:_sync_template:2182 - Importing template personal-health-log (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.893|INFO|baserow.core.handler:_sync_template:2182 - Importing template team-check-ins (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.937|INFO|baserow.core.handler:_sync_template:2182 - Importing template task-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] [2026-11-01 15:54:13,967: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:13] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  84%|########3 | 132/158 [00:03<00:00, 45.02it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:13] 372|2026-11-01 15:54:13.974|INFO|baserow.core.handler:_sync_template:2182 - Importing template emergency-triage-log (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:13.993|INFO|baserow.core.handler:_sync_template:2182 - Importing template tourism-agency-manager (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.036|INFO|baserow.core.handler:_sync_template:2182 - Importing template santa-logistics (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.072|INFO|baserow.core.handler:_sync_template:2182 - Importing template household-chores (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.093|INFO|baserow.core.handler:_sync_template:2182 - Importing template business-expenses (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] [2026-11-01 15:54:14,108: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:14] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  87%|########6 | 137/158 [00:03<00:00, 41.88it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.111|INFO|baserow.core.handler:_sync_template:2182 - Importing template event-staffing (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.142|INFO|baserow.core.handler:_sync_template:2182 - Importing template custom-code-demos (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.167|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_terracotta_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.184|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_tech_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.201|INFO|baserow.core.handler:_sync_template:2182 - Importing template home-inventory (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] [2026-11-01 15:54:14,211: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:14] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  90%|########9 | 142/158 [00:03<00:00, 43.53it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.233|INFO|baserow.core.handler:_sync_template:2182 - Importing template project-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.276|INFO|baserow.core.handler:_sync_template:2182 - Importing template incident-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.304|INFO|baserow.core.handler:_sync_template:2182 - Importing template legal-case-tracker (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.323|INFO|baserow.core.handler:_sync_template:2182 - Importing template advertising-campaigns (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.353|INFO|baserow.core.handler:_sync_template:2182 - Importing template gemba-walks (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] [2026-11-01 15:54:14,373: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:14] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  93%|#########3| 147/158 [00:03<00:00, 38.94it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.378|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_lavender_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.395|INFO|baserow.core.handler:_sync_template:2182 - Importing template ab_sunset_theme (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.430|INFO|baserow.core.handler:_sync_template:2182 - Importing template asset-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.460|INFO|baserow.core.handler:_sync_template:2182 - Importing template recipe-book (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.479|INFO|baserow.core.handler:_sync_template:2182 - Importing template product-roadmap (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] [2026-11-01 15:54:14,493: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:14] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  96%|#########6| 152/158 [00:04<00:00, 39.65it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.503|INFO|baserow.core.handler:_sync_template:2182 - Importing template lead-management (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.525|INFO|baserow.core.handler:_sync_template:2182 - Importing template smb-business-plan (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.544|INFO|baserow.core.handler:_sync_template:2182 - Importing template andon-calls (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.570|INFO|baserow.core.handler:_sync_template:2182 - Importing template compliance-assessment-builder (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.604|INFO|baserow.core.handler:_sync_template:2182 - Importing template standard-operating-procedures (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] [2026-11-01 15:54:14,621: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:14] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.:  99%|#########9| 157/158 [00:04<00:00, 39.50it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.635|INFO|baserow.core.handler:_sync_template:2182 - Importing template sqcdp (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] [2026-11-01 15:54:14,652: WARNING/ForkPoolWorker-1]  (B[m [36m [EXPORT_WORKER][2026-11-01 15:54:14] Syncing Baserow templates. Disable by setting BASEROW_TRIGGER_SYNC_TEMPLATES_AFTER_MIGRATION=false.: 100%|##########| 158/158 [00:04<00:00, 37.45it/s] (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:14] 372|2026-11-01 15:54:14.653|INFO|baserow.core.handler:sync_templates:2128 - Deleting templates that were installed but no longer exist in the templates dir... (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] 179|2026-11-01 15:54:08.182|INFO|baserow.core.telemetry.telemetry:setup_logging:85 - Logger setup. (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] __    -    ... __   -        _ (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] LocalTime -> 2026-11-01 15:54:15 (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] Configuration -> (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15]     . broker -> redis://:**@localhost:6379/0 (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15]     . loader -> celery.loaders.app.AppLoader (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15]     . scheduler -> redbeat.schedulers.RedBeatScheduler (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15]        . redis -> redis://:**@localhost:6379/0 (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15]        . lock -> `redbeat::lock` 1.33 minutes (80s) (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15]     . logfile -> [stderr]@%INFO (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15]     . maxinterval -> 20.00 seconds (20s) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:15] 351|2026-11-01 15:54:10.655|INFO|baserow.core.management.commands.locked_migrate:handle:44 - Migration complete, the migration lock has now been released. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:15] [2026-11-01 15:54:15 +0000] [163] [INFO] Starting gunicorn 23.0.0 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:15] [2026-11-01 15:54:15 +0000] [163] [INFO] Listening at: http://127.0.0.1:8000 (163) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:15] [2026-11-01 15:54:15 +0000] [163] [INFO] Using worker: uvicorn.workers.UvicornWorker (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:15] [2026-11-01 15:54:15 +0000] [385] [INFO] Booting worker with pid: 385 (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,215: INFO/MainProcess] beat: Starting... (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,304: INFO/MainProcess] beat: Acquired lock (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,320: INFO/MainProcess] Scheduler: Sending due task baserow.contrib.database.export.tasks.clean_up_old_jobs() (baserow.contrib.database.export.tasks.clean_up_old_jobs) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:14,676: INFO/ForkPoolWorker-1] Task baserow.core.tasks.sync_templates_task[e0368b47-b5b6-404f-89d9-860dd26bfda7] succeeded in 4.353456008997455s: None (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,333: INFO/MainProcess] Scheduler: Sending due task baserow.contrib.database.fields.tasks.delete_mentions_marked_for_deletion() (baserow.contrib.database.fields.tasks.delete_mentions_marked_for_deletion) (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:07,437: INFO/MainProcess] default-worker@67bbd65f9558 ready. (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,334: INFO/MainProcess] Task baserow.contrib.database.export.tasks.clean_up_old_jobs[b67a1b3b-1bc1-40cc-aea6-f8224b74bc96] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,342: INFO/MainProcess] Scheduler: Sending due task baserow.contrib.database.fields.tasks.run_periodic_fields_updates() (baserow.contrib.database.fields.tasks.run_periodic_fields_updates) (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,346: INFO/MainProcess] Scheduler: Sending due task baserow.contrib.database.rows.tasks.clean_up_row_history_entries() (baserow.contrib.database.rows.tasks.clean_up_row_history_entries) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:15] [2026-11-01 15:54:15 +0000] [386] [INFO] Booting worker with pid: 386 (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,345: INFO/MainProcess] Task baserow.contrib.database.fields.tasks.run_periodic_fields_updates[970e9c59-6166-4d07-b7f2-199fd4081285] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,351: INFO/MainProcess] Scheduler: Sending due task baserow.contrib.database.search.tasks.periodic_check_pending_search_data() (baserow.contrib.database.search.tasks.periodic_check_pending_search_data) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,353: INFO/MainProcess] Task baserow.contrib.database.rows.tasks.clean_up_row_history_entries[606fd575-6e45-4a0a-9efa-fd0e65fc4601] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,370: INFO/MainProcess] Task baserow.contrib.database.search.tasks.periodic_check_pending_search_data[b024842c-fc6f-4d9a-9ba0-20d20b05063a] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,368: INFO/MainProcess] Scheduler: Sending due task baserow.contrib.database.views.tasks.periodic_check_for_views_with_time_sensitive_filters() (baserow.contrib.database.views.tasks.periodic_check_for_views_with_time_sensitive_filters) (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,375: INFO/MainProcess] Scheduler: Sending due task baserow.core.action.tasks.cleanup_old_actions() (baserow.core.action.tasks.cleanup_old_actions) (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,378: INFO/MainProcess] Scheduler: Sending due task baserow.core.import_export.tasks.delete_marked_import_export_resources() (baserow.core.import_export.tasks.delete_marked_import_export_resources) (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,382: INFO/MainProcess] Scheduler: Sending due task baserow.core.import_export.tasks.mark_import_export_resources_for_deletion() (baserow.core.import_export.tasks.mark_import_export_resources_for_deletion) (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,385: INFO/MainProcess] Scheduler: Sending due task baserow.core.jobs.tasks.clean_up_jobs() (baserow.core.jobs.tasks.clean_up_jobs) (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,394: INFO/MainProcess] Scheduler: Sending due task baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email() (baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email) (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,401: INFO/MainProcess] Scheduler: Sending due task baserow.core.trash.tasks.mark_old_trash_for_permanent_deletion() (baserow.core.trash.tasks.mark_old_trash_for_permanent_deletion) (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,407: INFO/MainProcess] Scheduler: Sending due task baserow.core.trash.tasks.permanently_delete_marked_trash() (baserow.core.trash.tasks.permanently_delete_marked_trash) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,374: INFO/MainProcess] Task baserow.contrib.database.views.tasks.periodic_check_for_views_with_time_sensitive_filters[83774107-4336-487a-a1bb-abc3c0dae2ec] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,415: INFO/MainProcess] Scheduler: Sending due task baserow.core.usage.tasks.run_calculate_storage() (baserow.core.usage.tasks.run_calculate_storage) (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,343: INFO/MainProcess] Task baserow.contrib.database.fields.tasks.delete_mentions_marked_for_deletion[6112f789-44d3-46db-865e-b84676afd6bf] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:15] 372|2026-11-01 15:54:15.417|INFO|baserow.contrib.database.export.handler:clean_up_old_jobs:193 - Cleaning up 0 old jobs (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,422: INFO/MainProcess] Scheduler: Sending due task baserow.ws.tasks.cleanup_old_realtime_events() (baserow.ws.tasks.cleanup_old_realtime_events) (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,425: INFO/MainProcess] Task baserow.core.usage.tasks.run_calculate_storage[cfe48b39-ab50-4bcd-a7e3-866765e46048] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,423: INFO/ForkPoolWorker-1] Task baserow.contrib.database.export.tasks.clean_up_old_jobs[b67a1b3b-1bc1-40cc-aea6-f8224b74bc96] succeeded in 0.08769462700001895s: None (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,430: INFO/MainProcess] Scheduler: Sending due task baserow_enterprise.data_scanner.tasks.check_data_scans_due() (baserow_enterprise.data_scanner.tasks.check_data_scans_due) (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,440: INFO/MainProcess] Scheduler: Sending due task baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due() (baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due) (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,448: INFO/MainProcess] Scheduler: Sending due task baserow_enterprise.tasks.count_all_user_source_users() (baserow_enterprise.tasks.count_all_user_source_users) (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,452: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,432: INFO/MainProcess] Task baserow.ws.tasks.cleanup_old_realtime_events[44c35ab5-97d1-41e8-a170-3040bad7e3a8] received (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,479: INFO/ForkPoolWorker-1] Task baserow.contrib.database.fields.tasks.delete_mentions_marked_for_deletion[6112f789-44d3-46db-865e-b84676afd6bf] succeeded in 0.13389147899579257s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,438: INFO/MainProcess] Task baserow.core.action.tasks.cleanup_old_actions[625e4410-6c91-424c-afbb-ae1c862a1d9e] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,655: INFO/ForkPoolWorker-1] Task baserow.contrib.database.fields.tasks.run_periodic_fields_updates[970e9c59-6166-4d07-b7f2-199fd4081285] succeeded in 0.22176463500363752s: None (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,594: INFO/ForkPoolWorker-1] Task baserow.core.usage.tasks.run_calculate_storage[cfe48b39-ab50-4bcd-a7e3-866765e46048] succeeded in 0.09396407199528767s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,668: INFO/MainProcess] Task baserow.core.import_export.tasks.delete_marked_import_export_resources[dcdd0426-b320-4441-83a5-c5ec04c145e5] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,706: INFO/ForkPoolWorker-1] Task baserow.contrib.database.rows.tasks.clean_up_row_history_entries[606fd575-6e45-4a0a-9efa-fd0e65fc4601] succeeded in 0.043579158998909406s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,717: INFO/MainProcess] Task baserow.core.import_export.tasks.mark_import_export_resources_for_deletion[e5356187-30af-4cbd-85ab-831a62acb02c] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,781: INFO/ForkPoolWorker-1] Task baserow.contrib.database.search.tasks.periodic_check_pending_search_data[b024842c-fc6f-4d9a-9ba0-20d20b05063a] succeeded in 0.06915799800481182s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,792: INFO/MainProcess] Task baserow.core.jobs.tasks.clean_up_jobs[da9620ec-6658-40d1-86d5-c3f93f693479] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,889: INFO/ForkPoolWorker-1] Task baserow.contrib.database.views.tasks.periodic_check_for_views_with_time_sensitive_filters[83774107-4336-487a-a1bb-abc3c0dae2ec] succeeded in 0.10536125900398474s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,905: INFO/MainProcess] Task baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email[74fcc394-8d75-4b7b-8806-02ce4118adac] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:15] 372|2026-11-01 15:54:15.978|INFO|baserow.core.action.handler:clean_up_old_undoable_actions:307 - Cleaned up 0 actions. (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:15] [2026-11-01 15:54:15,980: INFO/ForkPoolWorker-1] Task baserow.core.action.tasks.cleanup_old_actions[625e4410-6c91-424c-afbb-ae1c862a1d9e] succeeded in 0.0810442090005381s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:16] [2026-11-01 15:54:15,990: INFO/MainProcess] Task baserow.core.trash.tasks.mark_old_trash_for_permanent_deletion[1ae9407d-ef2e-4b24-974c-5084bd408b17] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:16] [2026-11-01 15:54:16,049: INFO/ForkPoolWorker-1] Task baserow.core.import_export.tasks.delete_marked_import_export_resources[dcdd0426-b320-4441-83a5-c5ec04c145e5] succeeded in 0.06412543300393736s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:16] [2026-11-01 15:54:16,064: INFO/MainProcess] Task baserow.core.trash.tasks.permanently_delete_marked_trash[488cc9ca-038b-496f-8d64-09e063b30581] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:16] [2026-11-01 15:54:16,100: INFO/ForkPoolWorker-1] Task baserow.core.import_export.tasks.mark_import_export_resources_for_deletion[e5356187-30af-4cbd-85ab-831a62acb02c] succeeded in 0.0420930460022646s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:16] [2026-11-01 15:54:16,111: INFO/MainProcess] Task baserow_enterprise.data_scanner.tasks.check_data_scans_due[bae581ca-0745-4c1a-8056-84985eaa018a] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:16] [2026-11-01 15:54:16,167: INFO/ForkPoolWorker-1] Task baserow.core.jobs.tasks.clean_up_jobs[da9620ec-6658-40d1-86d5-c3f93f693479] succeeded in 0.05841870100266533s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:16] [2026-11-01 15:54:16,185: INFO/MainProcess] Task baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due[f0f8817e-47ed-4c55-a009-713507531fe3] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:16] [2026-11-01 15:54:16,196: INFO/ForkPoolWorker-1] Task baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email[74fcc394-8d75-4b7b-8806-02ce4118adac] succeeded in 0.019622569001512602s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:16] [2026-11-01 15:54:16,200: INFO/MainProcess] Task baserow_enterprise.tasks.count_all_user_source_users[26a57c4f-55ab-4e5f-83c4-ee75ebaea52e] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:16] 372|2026-11-01 15:54:16.247|INFO|baserow.core.trash.handler:mark_old_trash_for_permanent_deletion:297 - Successfully marked 0 old trash items for deletion as they were older than 72 hours. (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:16] [2026-11-01 15:54:16,250: INFO/ForkPoolWorker-1] Task baserow.core.trash.tasks.mark_old_trash_for_permanent_deletion[1ae9407d-ef2e-4b24-974c-5084bd408b17] succeeded in 0.052101173998380546s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:16] [2026-11-01 15:54:16,264: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[9f5a275e-eb2b-48fc-860e-8a2f2299a572] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:16] 372|2026-11-01 15:54:16.316|INFO|baserow.core.trash.handler:permanently_delete_marked_trash:392 - Successfully deleted 0 trash entries and their associated trashed items. (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:16] [2026-11-01 15:54:16,318: INFO/ForkPoolWorker-1] Task baserow.core.trash.tasks.permanently_delete_marked_trash[488cc9ca-038b-496f-8d64-09e063b30581] succeeded in 0.058082387993636075s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:16] [2026-11-01 15:54:16,334: INFO/MainProcess] Task baserow.contrib.integrations.tasks.call_periodic_services_that_are_due[65e3e292-f7d9-4d3d-8e9f-b4c2156ec563] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:16] [2026-11-01 15:54:16,383: INFO/ForkPoolWorker-1] Task baserow_enterprise.data_scanner.tasks.check_data_scans_due[bae581ca-0745-4c1a-8056-84985eaa018a] succeeded in 0.05562761799956206s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:16] [2026-11-01 15:54:16,393: INFO/MainProcess] Task baserow.core.notifications.tasks.singleton_send_instant_notifications_summary_by_email[f8acac06-9d85-4d44-ae42-893dd16a6a3b] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:16] [2026-11-01 15:54:16,487: INFO/ForkPoolWorker-1] Task baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due[f0f8817e-47ed-4c55-a009-713507531fe3] succeeded in 0.10141914000269026s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:16] [2026-11-01 15:54:16,936: INFO/ForkPoolWorker-1] Task baserow_enterprise.tasks.count_all_user_source_users[26a57c4f-55ab-4e5f-83c4-ee75ebaea52e] succeeded in 0.4435698490051436s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:17] [2026-11-01 15:54:16,998: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[9f5a275e-eb2b-48fc-860e-8a2f2299a572] succeeded in 0.05310877900046762s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:54:17] [2026-11-01 15:54:17,115: INFO/ForkPoolWorker-1] Task baserow.contrib.integrations.tasks.call_periodic_services_that_are_due[65e3e292-f7d9-4d3d-8e9f-b4c2156ec563] succeeded in 0.11427587000071071s: None (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:17] [2026-11-01 15:54:15 +0000] [388] [INFO] Booting worker with pid: 388 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:17] Not configuring telemetry due to BASEROW_ENABLE_OTEL not being set. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:17] Not configuring telemetry due to BASEROW_ENABLE_OTEL not being set. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:21] Not configuring telemetry due to BASEROW_ENABLE_OTEL not being set. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:21] 388|2026-11-01 15:54:21.008|INFO|baserow.core.telemetry.telemetry:setup_logging:85 - Logger setup. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:21] 385|2026-11-01 15:54:21.012|INFO|baserow.core.telemetry.telemetry:setup_logging:85 - Logger setup. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:26] 386|2026-11-01 15:54:21.012|INFO|baserow.core.telemetry.telemetry:setup_logging:85 - Logger setup. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:26] 388|2026-11-01 15:54:26.163|WARNING|baserow.config.helpers:log_env_warnings:175 - WARNING: Baserow is configured to use a BASEROW_PUBLIC_URL of http://localhost:80. If you attempt to access Baserow on any other hostname requests to the backend will fail as they will be from an unknown host. Please set BASEROW_PUBLIC_URL if you will be accessing Baserow from any other URL then http://localhost:80. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:26] 386|2026-11-01 15:54:26.198|WARNING|baserow.config.helpers:log_env_warnings:175 - WARNING: Baserow is configured to use a BASEROW_PUBLIC_URL of http://localhost:80. If you attempt to access Baserow on any other hostname requests to the backend will fail as they will be from an unknown host. Please set BASEROW_PUBLIC_URL if you will be accessing Baserow from any other URL then http://localhost:80. (B[m 
+baserow  | [1m [BASEROW-WATCHER][2026-11-01 15:54:27] Waiting for Baserow to become available, this might take 30+ seconds... (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:27] 385|2026-11-01 15:54:26.203|WARNING|baserow.config.helpers:log_env_warnings:175 - WARNING: Baserow is configured to use a BASEROW_PUBLIC_URL of http://localhost:80. If you attempt to access Baserow on any other hostname requests to the backend will fail as they will be from an unknown host. Please set BASEROW_PUBLIC_URL if you will be accessing Baserow from any other URL then http://localhost:80. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:27] 385|2026-11-01 15:54:27.519|INFO|baserow.config.helpers:__init__:158 - Setting ASGI app concurrency to None (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:27] 386|2026-11-01 15:54:27.520|INFO|baserow.config.helpers:__init__:158 - Setting ASGI app concurrency to None (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:27] [2026-11-01 15:54:27 +0000] [385] [INFO] Started server process [385] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:27] [2026-11-01 15:54:27 +0000] [385] [INFO] Waiting for application startup. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:27] [2026-11-01 15:54:27 +0000] [385] [INFO] ASGI 'lifespan' protocol appears unsupported. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:27] [2026-11-01 15:54:27 +0000] [385] [INFO] Application startup complete. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:27] 388|2026-11-01 15:54:27.660|INFO|baserow.config.helpers:__init__:158 - Setting ASGI app concurrency to None (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:27] [2026-11-01 15:54:27 +0000] [386] [INFO] Started server process [386] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:27] [2026-11-01 15:54:27 +0000] [386] [INFO] Waiting for application startup. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:27] [2026-11-01 15:54:27 +0000] [386] [INFO] ASGI 'lifespan' protocol appears unsupported. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:27] [2026-11-01 15:54:27 +0000] [386] [INFO] Application startup complete. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:27] [2026-11-01 15:54:27 +0000] [388] [INFO] Started server process [388] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:27] [2026-11-01 15:54:27 +0000] [388] [INFO] Waiting for application startup. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:27] [2026-11-01 15:54:27 +0000] [388] [INFO] ASGI 'lifespan' protocol appears unsupported. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:38] [2026-11-01 15:54:27 +0000] [388] [INFO] Application startup complete. (B[m 
+baserow  | [1m [BASEROW-WATCHER][2026-11-01 15:54:38] Waiting for Baserow to become available, this might take 30+ seconds... (B[m 
+baserow  | [1m [BASEROW-WATCHER][2026-11-01 15:54:38] ======================================================================= (B[m 
+baserow  | [1m [BASEROW-WATCHER][2026-11-01 15:54:38] [32mBaserow is now available at http://localhost:80[0m (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:41] 127.0.0.1:41070 - "GET /api/_health/ HTTP/1.1" 200 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:54:58] 127.0.0.1:59924 - "GET /api/_health/ HTTP/1.1" 200 (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:55:00] [2026-11-01 15:54:15,460: INFO/MainProcess] Scheduler: Sending due task periodic-service-type-task (baserow.contrib.integrations.tasks.call_periodic_services_that_are_due) (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:55:00] [2026-11-01 15:55:00,026: INFO/MainProcess] Scheduler: Sending due task baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email() (baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:55:00] [2026-11-01 15:54:17,232: INFO/ForkPoolWorker-1] Task baserow.core.notifications.tasks.singleton_send_instant_notifications_summary_by_email[f8acac06-9d85-4d44-ae42-893dd16a6a3b] succeeded in 0.11105243299971335s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:55:00] [2026-11-01 15:55:00,134: INFO/MainProcess] Task baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email[d0de788a-5fe3-4497-96ff-df137981aaf1] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:55:00] [2026-11-01 15:55:00,154: INFO/MainProcess] Task baserow.contrib.integrations.tasks.call_periodic_services_that_are_due[fa5003f5-40a1-41ea-ba5e-f9df3cc7a4ed] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:55:00] [2026-11-01 15:55:00,273: INFO/MainProcess] Task baserow.core.notifications.tasks.singleton_send_instant_notifications_summary_by_email[8eed9fd5-5f06-4cb3-a8b6-eed6fc3d913b] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:55:00] [2026-11-01 15:55:00,280: INFO/ForkPoolWorker-1] Task baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email[d0de788a-5fe3-4497-96ff-df137981aaf1] succeeded in 0.10298827400401933s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:55:00] [2026-11-01 15:55:00,479: INFO/ForkPoolWorker-1] Task baserow.contrib.integrations.tasks.call_periodic_services_that_are_due[fa5003f5-40a1-41ea-ba5e-f9df3cc7a4ed] succeeded in 0.18398806700133719s: None (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:06] 127.0.0.1:34046 - "GET /api/_health/ HTTP/1.1" 200 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:06] 172.21.0.1:0 - "POST /api/user/token-refresh/ HTTP/1.1" 200 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:06] [2026-11-01 15:55:06 +0000] [388] [INFO] 172.21.0.1:0 - "WebSocket /ws/core/?jwt_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzkzNTQ5MTA1LCJpYXQiOjE3OTM1NDg1MDUsImp0aSI6ImU3ZGMyZmFkMjIzMTRiOTBhYjU3Y2I4MDc2N2RjMzQ2IiwidXNlcl9pZCI6IjEifQ.1dT0lKodgv0Pa37KN69nKfK1EQwyg0voMfTv3oBSbFI&web_socket_id=bb7bf160-2b61-4d2c-97bd-f9e9bd2c71a1" [accepted] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:09] [2026-11-01 15:55:06 +0000] [388] [INFO] connection open (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:09] 127.0.0.1:36128 - "POST /api/user/token-refresh/ HTTP/1.1" 200 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:10] 127.0.0.1:36128 - "GET /api/settings/ HTTP/1.1" 200 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:10] 127.0.0.1:36128 - "GET /api/workspaces/ HTTP/1.1" 200 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:10] 127.0.0.1:36128 - "GET /api/applications/ HTTP/1.1" 200 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:13] 127.0.0.1:36128 - "GET /api/jobs/?states=%21finished%2C%21failed%2C%21cancelled HTTP/1.1" 200 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:13] 172.21.0.1:0 - "GET /api/licenses/ HTTP/1.1" 200 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:13] [2026-11-01 15:55:13 +0000] [386] [INFO] 172.21.0.1:0 - "WebSocket /ws/core/?jwt_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzkzNTQ5MTA5LCJpYXQiOjE3OTM1NDg1MDksImp0aSI6ImEyNGQ3YzBhMjhmYTRiNjQ5NmE1MDIyNGE0ZTdjYzk2IiwidXNlcl9pZCI6IjEifQ.dMug7_OuMg457YfSZdfnii7wrlclmZXyx0o96w6QUsw&web_socket_id=a338c446-3a86-4661-bc08-714bfddf4439" [accepted] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:13] 172.21.0.1:0 - "GET /api/settings/instance-id/ HTTP/1.1" 200 (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:55:15] [2026-11-01 15:55:00,116: INFO/MainProcess] Scheduler: Sending due task periodic-service-type-task (baserow.contrib.integrations.tasks.call_periodic_services_that_are_due) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:55:15] [2026-11-01 15:55:00,539: INFO/ForkPoolWorker-1] Task baserow.core.notifications.tasks.singleton_send_instant_notifications_summary_by_email[8eed9fd5-5f06-4cb3-a8b6-eed6fc3d913b] succeeded in 0.055327656998997554s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:55:15] [2026-11-01 15:55:15,468: INFO/MainProcess] Task baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due[47f6a308-855b-44e7-b289-b0f164e1a093] received (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:18] [2026-11-01 15:55:13 +0000] [386] [INFO] connection open (B[m 
+baserow  | 2026-11-01 15:55:22,762 INFO success: beatworker entered RUNNING state, process has stayed up for > than 100 seconds (startsecs)
+baserow  | 2026-11-01 15:55:22,762 INFO success: beatworker entered RUNNING state, process has stayed up for > than 100 seconds (startsecs)
+baserow  | [34m [BACKEND][2026-11-01 15:55:26] 127.0.0.1:58206 - "GET /api/_health/ HTTP/1.1" 200 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26] 388|2026-11-01 15:55:26.378|WARNING|baserow_premium.license.handler:register_license:506 - The license authority can't be reached because of a network error. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26] ERROR 2026-11-01 15:55:26,515 django.request.log_response:253- Internal Server Error: /api/licenses/  (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26] Traceback (most recent call last): (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/sync.py", line 555, in thread_handler (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     raise exc_info[1] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]   File "/baserow/venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 42, in inner (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     response = await get_response(request) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/sync.py", line 555, in thread_handler (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     raise exc_info[1] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]   File "/baserow/venv/lib/python3.14/site-packages/django/core/handlers/base.py", line 253, in _get_response_async (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     response = await wrapped_callback( (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]                ^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]         request, *callback_args, **callback_kwargs (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     ) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     ^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/sync.py", line 504, in __call__ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     ret = await asyncio.shield(exec_coro) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/current_thread_executor.py", line 40, in run (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     result = self.fn(*self.args, **self.kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/sync.py", line 559, in thread_handler (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     return func(*args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]   File "/baserow/venv/lib/python3.14/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     return view_func(request, *args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]   File "/baserow/venv/lib/python3.14/site-packages/django/views/generic/base.py", line 105, in view (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     return self.dispatch(request, *args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]            ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]   File "/baserow/venv/lib/python3.14/site-packages/rest_framework/views.py", line 515, in dispatch (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     response = self.handle_exception(exc) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]   File "/baserow/venv/lib/python3.14/site-packages/rest_framework/views.py", line 475, in handle_exception (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     self.raise_uncaught_exception(exc) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]   File "/baserow/venv/lib/python3.14/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     raise exc (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]   File "/baserow/venv/lib/python3.14/site-packages/rest_framework/views.py", line 512, in dispatch (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     response = handler(request, *args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]   File "/baserow/backend/src/baserow/api/decorators.py", line 242, in func_wrapper (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     return func(*args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]   File "/baserow/backend/src/baserow/api/decorators.py", line 117, in func_wrapper (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     return func(*args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]   File "/baserow/premium/backend/src/baserow_premium/api/license/views.py", line 121, in post (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     license_object = LicenseHandler.register_license( (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]         request.user, data["license"] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     ) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]   File "/baserow/premium/backend/src/baserow_premium/license/handler.py", line 538, in register_license (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]     license_id = decoded_license_payload["id"] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26]                  ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:26] KeyError: 'id' (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30] 172.21.0.1:0 - "POST /api/licenses/ HTTP/1.1" 500 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30] 388|2026-11-01 15:55:30.698|WARNING|baserow_premium.license.handler:register_license:506 - The license authority can't be reached because of a network error. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30] ERROR 2026-11-01 15:55:30,700 django.request.log_response:253- Internal Server Error: /api/licenses/  (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30] Traceback (most recent call last): (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/sync.py", line 555, in thread_handler (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     raise exc_info[1] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]   File "/baserow/venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 42, in inner (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     response = await get_response(request) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/sync.py", line 555, in thread_handler (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     raise exc_info[1] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]   File "/baserow/venv/lib/python3.14/site-packages/django/core/handlers/base.py", line 253, in _get_response_async (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     response = await wrapped_callback( (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]                ^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]         request, *callback_args, **callback_kwargs (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     ) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     ^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/sync.py", line 504, in __call__ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     ret = await asyncio.shield(exec_coro) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/current_thread_executor.py", line 40, in run (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     result = self.fn(*self.args, **self.kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/sync.py", line 559, in thread_handler (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     return func(*args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]   File "/baserow/venv/lib/python3.14/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     return view_func(request, *args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]   File "/baserow/venv/lib/python3.14/site-packages/django/views/generic/base.py", line 105, in view (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     return self.dispatch(request, *args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]            ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]   File "/baserow/venv/lib/python3.14/site-packages/rest_framework/views.py", line 515, in dispatch (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     response = self.handle_exception(exc) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]   File "/baserow/venv/lib/python3.14/site-packages/rest_framework/views.py", line 475, in handle_exception (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     self.raise_uncaught_exception(exc) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]   File "/baserow/venv/lib/python3.14/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     raise exc (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]   File "/baserow/venv/lib/python3.14/site-packages/rest_framework/views.py", line 512, in dispatch (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     response = handler(request, *args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]   File "/baserow/backend/src/baserow/api/decorators.py", line 242, in func_wrapper (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     return func(*args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]   File "/baserow/backend/src/baserow/api/decorators.py", line 117, in func_wrapper (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     return func(*args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]   File "/baserow/premium/backend/src/baserow_premium/api/license/views.py", line 121, in post (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     license_object = LicenseHandler.register_license( (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]         request.user, data["license"] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     ) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]   File "/baserow/premium/backend/src/baserow_premium/license/handler.py", line 538, in register_license (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]     license_id = decoded_license_payload["id"] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30]                  ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:30] KeyError: 'id' (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:38] 172.21.0.1:0 - "POST /api/licenses/ HTTP/1.1" 500 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:41] 127.0.0.1:50458 - "GET /api/_health/ HTTP/1.1" 200 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42] 127.0.0.1:35446 - "GET /api/_health/ HTTP/1.1" 200 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42] 388|2026-11-01 15:55:42.445|WARNING|baserow_premium.license.handler:register_license:506 - The license authority can't be reached because of a network error. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42] ERROR 2026-11-01 15:55:42,451 django.request.log_response:253- Internal Server Error: /api/licenses/  (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42] Traceback (most recent call last): (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/sync.py", line 555, in thread_handler (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     raise exc_info[1] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]   File "/baserow/venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 42, in inner (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     response = await get_response(request) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/sync.py", line 555, in thread_handler (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     raise exc_info[1] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]   File "/baserow/venv/lib/python3.14/site-packages/django/core/handlers/base.py", line 253, in _get_response_async (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     response = await wrapped_callback( (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]                ^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]         request, *callback_args, **callback_kwargs (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     ) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     ^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/sync.py", line 504, in __call__ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     ret = await asyncio.shield(exec_coro) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/current_thread_executor.py", line 40, in run (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     result = self.fn(*self.args, **self.kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/sync.py", line 559, in thread_handler (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     return func(*args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]   File "/baserow/venv/lib/python3.14/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     return view_func(request, *args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]   File "/baserow/venv/lib/python3.14/site-packages/django/views/generic/base.py", line 105, in view (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     return self.dispatch(request, *args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]            ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]   File "/baserow/venv/lib/python3.14/site-packages/rest_framework/views.py", line 515, in dispatch (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     response = self.handle_exception(exc) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]   File "/baserow/venv/lib/python3.14/site-packages/rest_framework/views.py", line 475, in handle_exception (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     self.raise_uncaught_exception(exc) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]   File "/baserow/venv/lib/python3.14/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     raise exc (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]   File "/baserow/venv/lib/python3.14/site-packages/rest_framework/views.py", line 512, in dispatch (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     response = handler(request, *args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]   File "/baserow/backend/src/baserow/api/decorators.py", line 242, in func_wrapper (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     return func(*args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]   File "/baserow/backend/src/baserow/api/decorators.py", line 117, in func_wrapper (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     return func(*args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]   File "/baserow/premium/backend/src/baserow_premium/api/license/views.py", line 121, in post (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     license_object = LicenseHandler.register_license( (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]         request.user, data["license"] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     ) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]   File "/baserow/premium/backend/src/baserow_premium/license/handler.py", line 538, in register_license (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]     license_id = decoded_license_payload["id"] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42]                  ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:42] KeyError: 'id' (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:55:58] 172.21.0.1:0 - "POST /api/licenses/ HTTP/1.1" 500 (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:56:00] [2026-11-01 15:55:15,452: INFO/MainProcess] Scheduler: Sending due task baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due() (baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due) (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:56:00] [2026-11-01 15:56:00,016: INFO/MainProcess] Scheduler: Sending due task baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email() (baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:56:00] [2026-11-01 15:55:15,540: INFO/ForkPoolWorker-1] Task baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due[47f6a308-855b-44e7-b289-b0f164e1a093] succeeded in 0.06938664099288872s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:56:00] [2026-11-01 15:56:00,026: INFO/MainProcess] Task baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email[13bd0bec-dfe2-4d6d-8805-25657f325337] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:56:00] [2026-11-01 15:56:00,034: INFO/MainProcess] Task baserow.contrib.integrations.tasks.call_periodic_services_that_are_due[e3afacf2-301d-4d23-9de5-30602256bf46] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:56:00] [2026-11-01 15:56:00,039: INFO/ForkPoolWorker-1] Task baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email[13bd0bec-dfe2-4d6d-8805-25657f325337] succeeded in 0.010170884997933172s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:56:00] [2026-11-01 15:56:00,039: INFO/MainProcess] Task baserow.core.notifications.tasks.singleton_send_instant_notifications_summary_by_email[9040a276-b0bd-42d3-88f3-54f490aedec2] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:56:00] [2026-11-01 15:56:00,098: INFO/ForkPoolWorker-1] Task baserow.contrib.integrations.tasks.call_periodic_services_that_are_due[e3afacf2-301d-4d23-9de5-30602256bf46] succeeded in 0.05692529900261434s: None (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04] 127.0.0.1:35712 - "GET /api/_health/ HTTP/1.1" 200 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04] 388|2026-11-01 15:56:04.625|WARNING|baserow_premium.license.handler:register_license:506 - The license authority can't be reached because of a network error. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04] ERROR 2026-11-01 15:56:04,628 django.request.log_response:253- Internal Server Error: /api/licenses/  (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04] Traceback (most recent call last): (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/sync.py", line 555, in thread_handler (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     raise exc_info[1] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]   File "/baserow/venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 42, in inner (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     response = await get_response(request) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/sync.py", line 555, in thread_handler (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     raise exc_info[1] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]   File "/baserow/venv/lib/python3.14/site-packages/django/core/handlers/base.py", line 253, in _get_response_async (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     response = await wrapped_callback( (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]                ^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]         request, *callback_args, **callback_kwargs (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     ) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     ^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/sync.py", line 504, in __call__ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     ret = await asyncio.shield(exec_coro) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/current_thread_executor.py", line 40, in run (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     result = self.fn(*self.args, **self.kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/sync.py", line 559, in thread_handler (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     return func(*args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]   File "/baserow/venv/lib/python3.14/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     return view_func(request, *args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]   File "/baserow/venv/lib/python3.14/site-packages/django/views/generic/base.py", line 105, in view (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     return self.dispatch(request, *args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]            ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]   File "/baserow/venv/lib/python3.14/site-packages/rest_framework/views.py", line 515, in dispatch (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     response = self.handle_exception(exc) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]   File "/baserow/venv/lib/python3.14/site-packages/rest_framework/views.py", line 475, in handle_exception (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     self.raise_uncaught_exception(exc) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]   File "/baserow/venv/lib/python3.14/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     raise exc (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]   File "/baserow/venv/lib/python3.14/site-packages/rest_framework/views.py", line 512, in dispatch (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     response = handler(request, *args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]   File "/baserow/backend/src/baserow/api/decorators.py", line 242, in func_wrapper (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     return func(*args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]   File "/baserow/backend/src/baserow/api/decorators.py", line 117, in func_wrapper (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     return func(*args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]   File "/baserow/premium/backend/src/baserow_premium/api/license/views.py", line 121, in post (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     license_object = LicenseHandler.register_license( (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]         request.user, data["license"] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     ) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]   File "/baserow/premium/backend/src/baserow_premium/license/handler.py", line 538, in register_license (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]     license_id = decoded_license_payload["id"] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04]                  ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:04] KeyError: 'id' (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:56:15] [2026-11-01 15:56:00,025: INFO/MainProcess] Scheduler: Sending due task periodic-service-type-task (baserow.contrib.integrations.tasks.call_periodic_services_that_are_due) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:56:15] [2026-11-01 15:56:00,143: INFO/ForkPoolWorker-1] Task baserow.core.notifications.tasks.singleton_send_instant_notifications_summary_by_email[9040a276-b0bd-42d3-88f3-54f490aedec2] succeeded in 0.042985551997844595s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:56:15] [2026-11-01 15:56:15,477: INFO/MainProcess] Task baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due[db24bede-84ce-4854-8cf0-b63b774c05b4] received (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:19] 172.21.0.1:0 - "POST /api/licenses/ HTTP/1.1" 500 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:40] 127.0.0.1:33732 - "GET /api/_health/ HTTP/1.1" 200 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:56:41] 127.0.0.1:43370 - "GET /api/_health/ HTTP/1.1" 200 (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:57:00] [2026-11-01 15:56:15,466: INFO/MainProcess] Scheduler: Sending due task baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due() (baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due) (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:57:00] [2026-11-01 15:57:00,015: INFO/MainProcess] Scheduler: Sending due task baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email() (baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:57:00] [2026-11-01 15:56:15,516: INFO/ForkPoolWorker-1] Task baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due[db24bede-84ce-4854-8cf0-b63b774c05b4] succeeded in 0.03646348499751184s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:57:00] [2026-11-01 15:57:00,034: INFO/MainProcess] Task baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email[3d5cb7ff-21b2-4bf0-80ff-e8cf60a37ad4] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:57:00] [2026-11-01 15:57:00,041: INFO/MainProcess] Task baserow.contrib.integrations.tasks.call_periodic_services_that_are_due[2173cdc1-c7ba-47a8-8fb3-f01de6cfeeb3] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:57:00] [2026-11-01 15:57:00,042: INFO/ForkPoolWorker-1] Task baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email[3d5cb7ff-21b2-4bf0-80ff-e8cf60a37ad4] succeeded in 0.004146516999753658s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:57:00] [2026-11-01 15:57:00,043: INFO/MainProcess] Task baserow.core.notifications.tasks.singleton_send_instant_notifications_summary_by_email[bb9db55f-303b-4ddd-a8a7-e67310a341ac] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:57:00] [2026-11-01 15:57:00,086: INFO/ForkPoolWorker-1] Task baserow.contrib.integrations.tasks.call_periodic_services_that_are_due[2173cdc1-c7ba-47a8-8fb3-f01de6cfeeb3] succeeded in 0.04200496200064663s: None (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:57:00] 127.0.0.1:56612 - "GET /api/_health/ HTTP/1.1" 200 (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:57:15] [2026-11-01 15:57:00,032: INFO/MainProcess] Scheduler: Sending due task periodic-service-type-task (baserow.contrib.integrations.tasks.call_periodic_services_that_are_due) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:57:15] [2026-11-01 15:57:00,118: INFO/ForkPoolWorker-1] Task baserow.core.notifications.tasks.singleton_send_instant_notifications_summary_by_email[bb9db55f-303b-4ddd-a8a7-e67310a341ac] succeeded in 0.03047841999796219s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:57:15] [2026-11-01 15:57:15,488: INFO/MainProcess] Task baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due[5a335e35-a9c7-4321-a4ea-377c88b2f9b9] received (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:57:20] 127.0.0.1:45850 - "GET /api/_health/ HTTP/1.1" 200 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:57:40] 127.0.0.1:45224 - "GET /api/_health/ HTTP/1.1" 200 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:57:41] 127.0.0.1:39140 - "GET /api/_health/ HTTP/1.1" 200 (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:58:00] [2026-11-01 15:57:15,478: INFO/MainProcess] Scheduler: Sending due task baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due() (baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due) (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:58:00] [2026-11-01 15:58:00,007: INFO/MainProcess] Scheduler: Sending due task baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email() (baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:58:00] [2026-11-01 15:57:15,535: INFO/ForkPoolWorker-1] Task baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due[5a335e35-a9c7-4321-a4ea-377c88b2f9b9] succeeded in 0.044824819997302257s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:58:00] [2026-11-01 15:58:00,012: INFO/MainProcess] Task baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email[151d89ca-8df5-4469-ace9-ec8e28623930] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:58:00] [2026-11-01 15:58:00,017: INFO/MainProcess] Task baserow.contrib.integrations.tasks.call_periodic_services_that_are_due[45eeb949-001f-4389-be8e-35f99393ef0e] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:58:00] [2026-11-01 15:58:00,022: INFO/MainProcess] Task baserow.core.notifications.tasks.singleton_send_instant_notifications_summary_by_email[2bbfa02c-77b7-4c76-8378-b1244e510e33] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:58:00] [2026-11-01 15:58:00,023: INFO/ForkPoolWorker-1] Task baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email[151d89ca-8df5-4469-ace9-ec8e28623930] succeeded in 0.005982654001854826s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:58:00] [2026-11-01 15:58:00,101: INFO/ForkPoolWorker-1] Task baserow.contrib.integrations.tasks.call_periodic_services_that_are_due[45eeb949-001f-4389-be8e-35f99393ef0e] succeeded in 0.07561138199525885s: None (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:58:01] 127.0.0.1:39152 - "GET /api/_health/ HTTP/1.1" 200 (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:58:15] [2026-11-01 15:58:00,012: INFO/MainProcess] Scheduler: Sending due task periodic-service-type-task (baserow.contrib.integrations.tasks.call_periodic_services_that_are_due) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:58:15] [2026-11-01 15:58:00,135: INFO/ForkPoolWorker-1] Task baserow.core.notifications.tasks.singleton_send_instant_notifications_summary_by_email[2bbfa02c-77b7-4c76-8378-b1244e510e33] succeeded in 0.03139901800022926s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:58:15] [2026-11-01 15:58:15,498: INFO/MainProcess] Task baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due[2c6c1f5b-98a4-45e2-9206-b99c3c3280f2] received (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:58:21] 127.0.0.1:43898 - "GET /api/_health/ HTTP/1.1" 200 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:58:41] 127.0.0.1:50358 - "GET /api/_health/ HTTP/1.1" 200 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:58:41] 127.0.0.1:41126 - "GET /api/_health/ HTTP/1.1" 200 (B[m 
+baserow  | [35m [REDIS][2026-11-01 15:58:43] 160:M 01 Nov 2026 15:53:42.826 * Ready to accept connections tcp (B[m 
+baserow  | [35m [REDIS][2026-11-01 15:58:43] 160:M 01 Nov 2026 15:58:43.092 * 100 changes in 300 seconds. Saving... (B[m 
+baserow  | [35m [REDIS][2026-11-01 15:58:43] 160:M 01 Nov 2026 15:58:43.094 * Background saving started by pid 660 (B[m 
+baserow  | [35m [REDIS][2026-11-01 15:58:43] 660:C 01 Nov 2026 15:58:43.110 * BGSAVE done, 1522 keys saved, 0 keys skipped, 252766 bytes written. (B[m 
+baserow  | [35m [REDIS][2026-11-01 15:58:43] 660:C 01 Nov 2026 15:58:43.125 * DB saved on disk (B[m 
+baserow  | [35m [REDIS][2026-11-01 15:58:43] 660:C 01 Nov 2026 15:58:43.126 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB (B[m 
+baserow  | [35m [POSTGRES][2026-11-01 15:58:45] 2026-11-01 15:54:10.152 UTC [376] baserow@baserow STATEMENT:  CREATE EXTENSION IF NOT EXISTS vector; (B[m 
+baserow  | [35m [POSTGRES][2026-11-01 15:58:49] 2026-11-01 15:58:45.083 UTC [334] LOG:  checkpoint starting: time (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:59:00] [2026-11-01 15:58:15,490: INFO/MainProcess] Scheduler: Sending due task baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due() (baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due) (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:59:00] [2026-11-01 15:59:00,010: INFO/MainProcess] Scheduler: Sending due task baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email() (baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:00] [2026-11-01 15:58:15,553: INFO/ForkPoolWorker-1] Task baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due[2c6c1f5b-98a4-45e2-9206-b99c3c3280f2] succeeded in 0.052944611001294106s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:00] [2026-11-01 15:59:00,016: INFO/MainProcess] Task baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email[3b7f3559-06ab-4afa-89fd-340879b7d728] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:00] [2026-11-01 15:59:00,021: INFO/MainProcess] Task baserow.contrib.integrations.tasks.call_periodic_services_that_are_due[339b928f-cade-4fd5-b187-42617d305c0f] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:00] [2026-11-01 15:59:00,028: INFO/MainProcess] Task baserow.core.notifications.tasks.singleton_send_instant_notifications_summary_by_email[44056ea3-9921-46be-8957-61a35ee913bb] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:00] [2026-11-01 15:59:00,028: INFO/ForkPoolWorker-1] Task baserow.core.notifications.tasks.beat_send_instant_notifications_summary_by_email[3b7f3559-06ab-4afa-89fd-340879b7d728] succeeded in 0.005038292998506222s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:00] [2026-11-01 15:59:00,149: INFO/ForkPoolWorker-1] Task baserow.contrib.integrations.tasks.call_periodic_services_that_are_due[339b928f-cade-4fd5-b187-42617d305c0f] succeeded in 0.11801506999472622s: None (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:01] 127.0.0.1:41142 - "GET /api/_health/ HTTP/1.1" 200 (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:00,014: INFO/MainProcess] Scheduler: Sending due task periodic-service-type-task (baserow.contrib.integrations.tasks.call_periodic_services_that_are_due) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:00,209: INFO/ForkPoolWorker-1] Task baserow.core.notifications.tasks.singleton_send_instant_notifications_summary_by_email[44056ea3-9921-46be-8957-61a35ee913bb] succeeded in 0.055641881001065485s: None (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,334: INFO/MainProcess] Scheduler: Sending due task baserow.contrib.database.export.tasks.clean_up_old_jobs() (baserow.contrib.database.export.tasks.clean_up_old_jobs) (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,381: INFO/MainProcess] Scheduler: Sending due task baserow.core.action.tasks.cleanup_old_actions() (baserow.core.action.tasks.cleanup_old_actions) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,342: INFO/MainProcess] Task baserow.contrib.database.export.tasks.clean_up_old_jobs[f0331647-b90b-46c4-a224-62042cc0be65] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,386: INFO/MainProcess] Scheduler: Sending due task baserow.core.import_export.tasks.delete_marked_import_export_resources() (baserow.core.import_export.tasks.delete_marked_import_export_resources) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,387: INFO/MainProcess] Task baserow.core.action.tasks.cleanup_old_actions[e62870b4-3d3e-48f9-bb50-8d420af32de4] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,393: INFO/MainProcess] Scheduler: Sending due task baserow.core.import_export.tasks.mark_import_export_resources_for_deletion() (baserow.core.import_export.tasks.mark_import_export_resources_for_deletion) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,395: INFO/MainProcess] Task baserow.core.import_export.tasks.delete_marked_import_export_resources[df5a0848-f7b8-4f4f-8dfe-9d33656e1349] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,396: INFO/MainProcess] Scheduler: Sending due task baserow.core.jobs.tasks.clean_up_jobs() (baserow.core.jobs.tasks.clean_up_jobs) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,399: INFO/MainProcess] Task baserow.core.import_export.tasks.mark_import_export_resources_for_deletion[941977b4-3350-49d3-8a61-2d5e73521ab2] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] 372|2026-11-01 15:59:15.395|INFO|baserow.contrib.database.export.handler:clean_up_old_jobs:193 - Cleaning up 0 old jobs (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,403: INFO/MainProcess] Task baserow.core.jobs.tasks.clean_up_jobs[f22f7cd3-772a-44c1-8bcb-1e1e08ba1f50] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,401: INFO/MainProcess] Scheduler: Sending due task baserow.core.trash.tasks.mark_old_trash_for_permanent_deletion() (baserow.core.trash.tasks.mark_old_trash_for_permanent_deletion) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,410: INFO/ForkPoolWorker-1] Task baserow.contrib.database.export.tasks.clean_up_old_jobs[f0331647-b90b-46c4-a224-62042cc0be65] succeeded in 0.0667517809997662s: None (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,412: INFO/MainProcess] Scheduler: Sending due task baserow.core.trash.tasks.permanently_delete_marked_trash() (baserow.core.trash.tasks.permanently_delete_marked_trash) (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,457: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,417: INFO/MainProcess] Task baserow.core.trash.tasks.mark_old_trash_for_permanent_deletion[fa4d4e0d-aa72-49b5-89e1-431a4099c180] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] 372|2026-11-01 15:59:15.537|INFO|baserow.core.action.handler:clean_up_old_undoable_actions:307 - Cleaned up 0 actions. (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,539: INFO/ForkPoolWorker-1] Task baserow.core.action.tasks.cleanup_old_actions[e62870b4-3d3e-48f9-bb50-8d420af32de4] succeeded in 0.12429487499321112s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,545: INFO/MainProcess] Task baserow.core.trash.tasks.permanently_delete_marked_trash[356980a0-c8f0-416c-b326-4e9f41c27fb2] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,597: INFO/ForkPoolWorker-1] Task baserow.core.import_export.tasks.delete_marked_import_export_resources[df5a0848-f7b8-4f4f-8dfe-9d33656e1349] succeeded in 0.05370838099770481s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,604: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[051532ef-a9ba-48b1-91c3-4f8fc9c81c07] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,639: INFO/ForkPoolWorker-1] Task baserow.core.import_export.tasks.mark_import_export_resources_for_deletion[941977b4-3350-49d3-8a61-2d5e73521ab2] succeeded in 0.03697266999370186s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,643: INFO/MainProcess] Task baserow_enterprise.data_sync.tasks.call_periodic_data_sync_syncs_that_are_due[28287a67-6d08-4436-8a68-63ccf3340792] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,679: INFO/ForkPoolWorker-1] Task baserow.core.jobs.tasks.clean_up_jobs[f22f7cd3-772a-44c1-8bcb-1e1e08ba1f50] succeeded in 0.03744404800090706s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] 372|2026-11-01 15:59:15.711|INFO|baserow.core.trash.handler:mark_old_trash_for_permanent_deletion:297 - Successfully marked 0 old trash items for deletion as they were older than 72 hours. (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,713: INFO/ForkPoolWorker-1] Task baserow.core.trash.tasks.mark_old_trash_for_permanent_deletion[fa4d4e0d-aa72-49b5-89e1-431a4099c180] succeeded in 0.0282970309999655s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] 372|2026-11-01 15:59:15.744|INFO|baserow.core.trash.handler:permanently_delete_marked_trash:392 - Successfully deleted 0 trash entries and their associated trashed items. (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,745: INFO/ForkPoolWorker-1] Task baserow.core.trash.tasks.permanently_delete_marked_trash[356980a0-c8f0-416c-b326-4e9f41c27fb2] succeeded in 0.028362003002257552s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-01 15:59:15] [2026-11-01 15:59:15,793: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[051532ef-a9ba-48b1-91c3-4f8fc9c81c07] succeeded in 0.04441560900158947s: None (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:21] 127.0.0.1:59374 - "GET /api/_health/ HTTP/1.1" 200 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38] 127.0.0.1:37780 - "GET /api/_health/ HTTP/1.1" 200 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38] 388|2026-11-01 15:59:38.641|WARNING|baserow_premium.license.handler:register_license:506 - The license authority can't be reached because of a network error. (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38] ERROR 2026-11-01 15:59:38,675 django.request.log_response:253- Internal Server Error: /api/licenses/  (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38] Traceback (most recent call last): (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/sync.py", line 555, in thread_handler (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     raise exc_info[1] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]   File "/baserow/venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 42, in inner (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     response = await get_response(request) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/sync.py", line 555, in thread_handler (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     raise exc_info[1] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]   File "/baserow/venv/lib/python3.14/site-packages/django/core/handlers/base.py", line 253, in _get_response_async (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     response = await wrapped_callback( (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]                ^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]         request, *callback_args, **callback_kwargs (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     ) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     ^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/sync.py", line 504, in __call__ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     ret = await asyncio.shield(exec_coro) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/current_thread_executor.py", line 40, in run (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     result = self.fn(*self.args, **self.kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]   File "/baserow/venv/lib/python3.14/site-packages/asgiref/sync.py", line 559, in thread_handler (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     return func(*args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]   File "/baserow/venv/lib/python3.14/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     return view_func(request, *args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]   File "/baserow/venv/lib/python3.14/site-packages/django/views/generic/base.py", line 105, in view (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     return self.dispatch(request, *args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]            ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]   File "/baserow/venv/lib/python3.14/site-packages/rest_framework/views.py", line 515, in dispatch (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     response = self.handle_exception(exc) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]   File "/baserow/venv/lib/python3.14/site-packages/rest_framework/views.py", line 475, in handle_exception (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     self.raise_uncaught_exception(exc) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]   File "/baserow/venv/lib/python3.14/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     raise exc (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]   File "/baserow/venv/lib/python3.14/site-packages/rest_framework/views.py", line 512, in dispatch (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     response = handler(request, *args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]   File "/baserow/backend/src/baserow/api/decorators.py", line 242, in func_wrapper (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     return func(*args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]   File "/baserow/backend/src/baserow/api/decorators.py", line 117, in func_wrapper (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     return func(*args, **kwargs) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]   File "/baserow/premium/backend/src/baserow_premium/api/license/views.py", line 121, in post (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     license_object = LicenseHandler.register_license( (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]         request.user, data["license"] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     ) (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]   File "/baserow/premium/backend/src/baserow_premium/license/handler.py", line 538, in register_license (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]     license_id = decoded_license_payload["id"] (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38]                  ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^ (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:38] KeyError: 'id' (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:41] 172.21.0.1:0 - "POST /api/licenses/ HTTP/1.1" 500 (B[m 
+baserow  | [34m [BACKEND][2026-11-01 15:59:41] 127.0.0.1:60814 - "GET /api/_health/ HTTP/1.1" 200 (B[m 

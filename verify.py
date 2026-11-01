@@ -12,9 +12,10 @@ with open("public.pem", "rb") as f:
 with open("license_token.txt", "r") as f:
     license_token = f.read()
 
-def verify_token(token:str, public_key_obj:PublicKeyTypes) -> str:
+def verify_token(token:bytes, public_key_obj:PublicKeyTypes) -> str:
     payload_b64, sig_b64 = token.split(".")
-    sig_bytes = base64.urlsafe_b64decode(sig_b64 + "=" * ((4 - len(sig_b64) % 4) % 4))
+    print(payload_b64.encode())
+    sig_bytes = base64.urlsafe_b64decode(sig_b64)
     # payload in signature is the base64 encoded payload, not the original json string
     hex_msg = hashlib.sha256(payload_b64.encode()).hexdigest().encode()
     
