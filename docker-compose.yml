@@ -9,6 +9,8 @@ services:
       - "443:443"
     volumes:
       - baserow_data:/baserow/data
+      # - ./docs/bas-1-baseline/evidence/original_public_key.pem:/baserow/premium/backend/src/baserow_premium/public_key.pem
+      # - ./docs/bas-1-baseline/evidence/original_public_key_debug.pem:/baserow/premium/backend/src/baserow_premium/public_key_debug.pem
       - ./public.pem:/baserow/premium/backend/src/baserow_premium/public_key.pem
       - ./public.pem:/baserow/premium/backend/src/baserow_premium/public_key_debug.pem
     extra_hosts:  

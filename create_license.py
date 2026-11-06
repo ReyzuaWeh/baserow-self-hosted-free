@@ -1,10 +1,20 @@
 import base64  
 import json
-import hashlib  
+import hashlib
+import subprocess
+import sys  
 from cryptography.hazmat.primitives import hashes  
 from cryptography.hazmat.primitives.asymmetric import padding  
 from cryptography.hazmat.primitives.serialization import load_pem_private_key  
 from datetime import datetime
+
+instance_id = sys.argv[1] if len(sys.argv) > 1 else None
+if not instance_id:
+    cmd = 'docker compose exec baserow ./baserow.sh backend-cmd python -c "import django; django.setup(); from baserow.core.models import Settings; print(Settings.objects.first().instance_id)" | tail -n 1'
+    instance_id = subprocess.check_output(cmd, shell=True).decode().strip()
+
+if not instance_id:
+    raise ValueError("instance_id tidak ditemukan!")
 
 with open('private.pem') as f:
     private_key_pem =  f.read().encode("utf-8")
@@ -19,7 +29,7 @@ payload = {
     "issued_on": datetime.now().isoformat(),
     "issued_to_email": "reybatos@gmail.com",
     "issued_to_name": "reybatos",
-    "instance_id": "eNarG9tEXX2Hp3OLq6y7FjZsNZW9UKpLxAUxS4w5ir0"
+    "instance_id": instance_id
 }
 private_key = load_pem_private_key(private_key_pem, password=None)
 

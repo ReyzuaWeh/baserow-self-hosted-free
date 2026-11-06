@@ -1,6 +1,5 @@
 # BAS-3: Determine the full set of network dependencies and the failure mode
-
-> DEV-887
+*CODE:DEV-887*
 
 This repository documents the environment setup, licensing architecture verification, role-based access control (RBAC), audit logging, and empiric log analysis for self-hosted Baserow Enterprise (Version 2.4.1).
 
