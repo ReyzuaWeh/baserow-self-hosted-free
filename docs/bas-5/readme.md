@@ -1,6 +1,6 @@
-# BAS-3: License Verification Key Persistence & Deployment Architecture
+# BAS-5: Make the patch survive container recreation, not just a restart
+*CODE:DEV-889*
 
-## 1. Executive Summary
 This ticket addresses transforming the license verification key patch from a temporary runtime action into a permanent, declarative deployment setup. The patch must automatically survive container recreations (attributable to host reboots, compose updates, image refreshes, or shutdowns) without requiring any manual intervention during runtime.
 
 ---
@@ -13,7 +13,7 @@ To satisfy declarative deployment requirements while adhering to the standalone 
 * **Mechanism:** Direct binding of `./public.pem` from the host system to the internal public key paths inside the container (`public_key.pem` and `public_key_debug.pem`) using standard Docker Compose `volumes`.
 * **Justification:**
   1. **Simplicity & Speed:** Configured entirely within `docker-compose.yml` without introducing extra build steps, base image alterations, or entrypoint wrappers.
-  2. **Direct Host-Container Connection:** Creates a real-time link between the host file and the container file. If container startup routines attempt to overwrite or alter the file, changes are reflected directly on the host device—making any tampering immediately visible and traceable.
+  2. **Direct Host-Container Connection:** Creates a real-time link between the host file and the container file. If container startup routines attempt to overwrite or alter the file, changes are reflected directly on the host device making any tampering immediately visible and traceable.
   3. **Zero Manual Steps:** Replaces temporary commands (`docker cp`) with automatic infrastructure-level provisioning upon container initialization.
 * **Anti-Clobber Verification:** Checksum analysis (`sha256sum`) confirms that Baserow 2.4.1's internal startup script does not modify or overwrite mounted files.
 
