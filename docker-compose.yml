@@ -1,7 +1,7 @@
 services:
   baserow:
     container_name: baserow
-    image: baserow/baserow:2.4.1
+    image: baserow/baserow:latest
     environment:
       BASEROW_PUBLIC_URL: "http://localhost:80"
     ports:
