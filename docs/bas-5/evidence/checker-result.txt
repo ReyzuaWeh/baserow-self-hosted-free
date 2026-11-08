@@ -1,0 +1,3 @@
+Host Key SHA256      : b8f3e8b3acd7b0f812663f340cab726dd9d1a72654a8ddbec8f03bb075c36061
+Container Key SHA256 : b8f3e8b3acd7b0f812663f340cab726dd9d1a72654a8ddbec8f03bb075c36061
+VERDICT: MATCH — Baserow startup did not overwrite the mounted key.

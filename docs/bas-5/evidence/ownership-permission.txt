@@ -1,0 +1,2 @@
+-rw-r--r-- 1 baserow_docker_user baserow_docker_user 451 Nov  8 12:10 /baserow/premium/backend/src/baserow_premium/public_key.pem
+-rw-r--r-- 1 baserow_docker_user baserow_docker_user 451 Nov  8 12:10 /baserow/premium/backend/src/baserow_premium/public_key_debug.pem
