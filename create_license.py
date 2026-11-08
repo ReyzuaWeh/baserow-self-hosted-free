@@ -32,8 +32,8 @@ payload = {
     "seats": 999999,
     "application_users": 999999,
     "issued_on": datetime.now().isoformat(),
-    "issued_to_email": "reybatos@gmail.com",
-    "issued_to_name": "reybatos",
+    "issued_to_email": ISSUED_TO_EMAIL,
+    "issued_to_name": ISSUED_TO_NAME,
     "instance_id": instance_id
 }
 private_key = load_pem_private_key(private_key_pem, password=None)

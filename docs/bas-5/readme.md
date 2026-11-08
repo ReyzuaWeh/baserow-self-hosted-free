@@ -67,11 +67,23 @@ volumes:
 
 ### AC-1: Lifecycle Persistence (Down & Back Up)
 * **Status:** **PASS**
-* **Verification:** Executing `docker compose down && docker compose up -d` results in a patched container where license `23c2136e-7a41-4712-9c10-09311394f420` remains active (`is_valid: True`) without manual execution of `docker cp` or permission fixes. (Full trace: `./evidence/ac1_persistence_test.log`).
+* **Verification:** 
+
+![Before Down Services](./screenshots/before-down.png)
+
+![Downing and Up Process](./screenshots/while-down-up.png)
+
+![After Down Services](./screenshots/after-down-up.png)
 
 ### AC-2: Checksum Anti-Clobber Verification
 * **Status:** **PASS**
 * **Verification:** Host `sha256sum ./public.pem` perfectly matches the container's `sha256sum` post-startup, confirming the startup process leaves mounted keys intact.
+* **Evidence:** [Checker Result](./evidence/checker-result.txt)
+* **Command to verify:**
+```bash
+. pemcheck.sh
+```
+>NOTE: You should give execute permission before run using `chmod +x pemcheck.sh`
 
 ### AC-3: Standalone Requirement (BAS-7 Compatibility)
 * **Status:** **PASS**
@@ -82,3 +94,23 @@ volumes:
 * **Observations (`docker compose down -v`):**
   - **Survives (Automated):** Key mount (`public.pem`) remains intact inside newly generated containers.
   - **Requires Intervention:** PostgreSQL database tables are cleared. License tokens must be re-submitted once via the UI/API, which registers instantly without requiring backend restarts because the key patch persists.
+* **Evidence:** [Volume Down](./evidence/volume_wipe_test.txt), [Recovery](./evidence/volume_recover.txt)
+* **Step by Step:** 
+    * Remove and run services
+    ```bash
+    docker compose down -v && docker compose up -d
+    ```
+    * Create new license
+    ```bash
+    python create_license.py
+    ```
+    * Register it in setting page
+    ![Expected Result](./screenshots/regist-with-new-license.png)
+>NOTE: The license must be generated again using `python create_license.py` because the instance will be different
+
+![If not updated](./screenshots/regist-with-old-license.png)
+
+## Findings
+1. Create License becomes Invalid
+* Reason : Accidentally using `python create_pem.py` but change `public.pem` to the old ones
+* Solution : Create anothe pem, then it will be resolved
