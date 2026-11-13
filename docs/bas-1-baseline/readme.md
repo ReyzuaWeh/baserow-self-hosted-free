@@ -30,7 +30,6 @@ This document records the stock baseline environment, container metadata, bundle
 ### 1.2 Container & Image Specifications
 * **Target Image:** `baserow/baserow:2.4.1`
 * **Image ID:** `2229bc0ad9c8`
-* **Image Repo Digest:** `baserow/baserow@sha256:2229bc0ad9c8...`
 * **Service Name:** `baserow`
 * **Running Status:** `Up (healthy)`
 * **Exposed Ports:** `0.0.0.0:80->80/tcp`, `0.0.0.0:443->443/tcp`
