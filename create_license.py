@@ -29,8 +29,8 @@ payload = {
     "valid_from": datetime.strptime("2025-11-01", "%Y-%m-%d").isoformat(),
     "valid_through": datetime.strptime("2099-10-31", "%Y-%m-%d").isoformat(),
     "product_code": "enterprise",
-    "seats": 999999,
-    "application_users": 999999,
+    "seats": 5,
+    "application_users": 5,
     "issued_on": datetime.now().isoformat(),
     "issued_to_email": ISSUED_TO_EMAIL,
     "issued_to_name": ISSUED_TO_NAME,
@@ -57,5 +57,5 @@ sig_b64 = base64.urlsafe_b64encode(signature).decode('utf-8')
 license_token = f"{payload_b64.decode('utf-8')}.{sig_b64}"
 
 print(license_token)
-with open("license_token.txt", "w") as f:
+with open("docs/bas-8/evidence/license_token_5s.txt", "w") as f:
     f.write(license_token)

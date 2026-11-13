@@ -1,5 +1,5 @@
 # BAS-6: Upgrade to the latest release, re-apply the patch, and verify
-*CODE:DEV-889*
+*CODE:DEV-890*
 
 For this, we will focus on upgrading to the newest version baserow to check if it's still work or not
 

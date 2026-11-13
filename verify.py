@@ -14,7 +14,6 @@ with open("license_token.txt", "r") as f:
 
 def verify_token(token:bytes, public_key_obj:PublicKeyTypes) -> str:
     payload_b64, sig_b64 = token.split(".")
-    print(payload_b64.encode())
     sig_bytes = base64.urlsafe_b64decode(sig_b64)
     # payload in signature is the base64 encoded payload, not the original json string
     hex_msg = hashlib.sha256(payload_b64.encode()).hexdigest().encode()
@@ -27,7 +26,7 @@ def verify_token(token:bytes, public_key_obj:PublicKeyTypes) -> str:
             hashes.SHA256()
         )
         
-        payload_bytes = base64.urlsafe_b64decode(payload_b64 + "=" * ((4 - len(payload_b64) % 4) % 4))
+        payload_bytes = base64.urlsafe_b64decode(payload_b64)
         payload_data = json.loads(payload_bytes)
         
         return f"SUCCESS: Valid License. Seats: {payload_data.get('seats')}, Application Users: {payload_data.get('application_users')}"
