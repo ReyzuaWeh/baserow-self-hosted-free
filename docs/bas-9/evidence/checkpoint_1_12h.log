@@ -1,0 +1,159 @@
+=== [2026-11-14T14:50:27Z] interval_sec=0 ===
+License: {"id":4,"seats":999999,"active":null,"valid_from":"2025-11-01T00:00:00Z","valid_through":"2099-10-31T00:00:00Z","last_check":"2026-11-14T14:33:41.784063Z","product_code":"enterprise"}
+Kanban API HTTP: 200 | View ID: 3947
+Container: health=healthy | started_at=2026-11-14T14:48:48.438758974Z | restart_count=0 | Gunicorn: 166 01:39 /baserow/venv/bin/python /baserow/venv/bin/gunicorn --workers=3 --worker-tmp-dir /dev/shm --log-file=- --access-logfile=- --capture-output -b 127.0.0.1:8000 --log-level=INFO -k uvicorn.workers.UvicornWorker baserow.config.asgi:application
+Resources: cpu=1.52% | mem=1.892GiB / 3.723GiB (50.81%) | disk_used=160G/228G (70%) | host_ram=3.2Gi/3.7Gi
+License Logs: baserow  | Welcome to Baserow. See https://baserow.io/installation/install-with-docker/ for detailed instructions on 
+baserow  | [35m [REDIS][2026-11-14 14:48:50] 160:M 14 Nov 2026 14:48:50.845 * Done loading RDB, keys loaded: 1864, keys expired: 29. (B[m 
+baserow  | [35m [POSTGRES][2026-11-14 14:48:52] 2026-11-14 14:48:52.639 UTC [336] LOG:  invalid record length at 0/11031160: wanted 24, got 0 (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-14 14:49:07]   . baserow.core.snapshots.tasks.delete_expired_snapshots (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-14 14:49:07]   . baserow.core.user.tasks.flush_expired_tokens (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-14 14:49:07]   . baserow_premium.fields.tasks.generate_scheduled_ai_field_generation (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-14 14:49:07]   . baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-14 14:49:07]   . baserow_premium.fields.tasks.schedule_ai_field_generation (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-14 14:49:07]   . baserow_premium.license.tasks.license_check (B[m 
+baserow  | [36m [CELERY_WORKER][2026-11-14 14:49:07]   . baserow_premium.usage.tasks.run_calculate_seats (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 14:49:09]   . baserow.core.snapshots.tasks.delete_expired_snapshots (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 14:49:09]   . baserow.core.user.tasks.flush_expired_tokens (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 14:49:09]   . baserow_premium.fields.tasks.generate_scheduled_ai_field_generation (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 14:49:09]   . baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 14:49:09]   . baserow_premium.fields.tasks.schedule_ai_field_generation (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 14:49:09]   . baserow_premium.license.tasks.license_check (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 14:49:09]   . baserow_premium.usage.tasks.run_calculate_seats (B[m 
+baserow  | [34m [BACKEND][2026-11-14 14:49:10]   Apply all migrations: auth, automation, baserow_enterprise, baserow_premium, builder, contenttypes, core, dashboard, database, db, integrations, sessions, ws (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 14:49:21] [2026-11-14 14:49:21,299: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 14:49:21] [2026-11-14 14:49:21,729: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[84a389a2-813d-40a5-8735-08f3bf78fd5c] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 14:49:22] [2026-11-14 14:49:22,497: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[84a389a2-813d-40a5-8735-08f3bf78fd5c] succeeded in 0.05949402599799214s: None (B[m 
+baserow  | [34m [BACKEND][2026-11-14 14:50:29] 172.21.0.1:0 - "GET /api/licenses/ HTTP/1.1" 200 (B[m 
+=== [2026-11-14T15:06:35Z] interval_sec=968 ===
+License: {"id":4,"seats":999999,"active":null,"valid_from":"2025-11-01T00:00:00Z","valid_through":"2099-10-31T00:00:00Z","last_check":"2026-11-14T14:33:41.784063Z","product_code":"enterprise"}
+Kanban API HTTP: 200 | View ID: 3948
+Container: health=healthy | started_at=2026-11-14T14:48:48.438758974Z | restart_count=0 | Gunicorn: 166 17:49 /baserow/venv/bin/python /baserow/venv/bin/gunicorn --workers=3 --worker-tmp-dir /dev/shm --log-file=- --access-logfile=- --capture-output -b 127.0.0.1:8000 --log-level=INFO -k uvicorn.workers.UvicornWorker baserow.config.asgi:application
+Resources: cpu=3.00% | mem=389.4MiB / 3.723GiB (10.21%) | disk_used=160G/228G (70%) | host_ram=3.1Gi/3.7Gi
+License Logs: baserow  | [36m [BEAT_WORKER][2026-11-14 14:54:21] [2026-11-14 14:54:21,302: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 14:54:21] [2026-11-14 14:54:21,390: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[139d79bf-30b3-43d6-8fb9-d1611a35b88f] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 14:54:21] [2026-11-14 14:54:21,568: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[139d79bf-30b3-43d6-8fb9-d1611a35b88f] succeeded in 0.0370979660001467s: None (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 14:59:21] [2026-11-14 14:59:21,306: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 14:59:21] [2026-11-14 14:59:21,394: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[f5da843f-a436-4ed4-ac79-ed877c6b2fb4] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 14:59:21] [2026-11-14 14:59:21,533: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[f5da843f-a436-4ed4-ac79-ed877c6b2fb4] succeeded in 0.036446550002438016s: None (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 15:04:21] [2026-11-14 15:04:21,308: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:04:21] [2026-11-14 15:04:21,445: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[e199ee28-f55f-43c4-a9d5-840ccef3d970] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:04:21] [2026-11-14 15:04:21,952: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[e199ee28-f55f-43c4-a9d5-840ccef3d970] succeeded in 0.03066630799730774s: None (B[m 
+baserow  | [34m [BACKEND][2026-11-14 15:06:38] 172.21.0.1:0 - "GET /api/licenses/ HTTP/1.1" 200 (B[m 
+=== [2026-11-14T15:24:13Z] interval_sec=1058 ===
+License: {"id":4,"seats":999999,"active":null,"valid_from":"2025-11-01T00:00:00Z","valid_through":"2099-10-31T00:00:00Z","last_check":"2026-11-14T14:33:41.784063Z","product_code":"enterprise"}
+Kanban API HTTP: 200 | View ID: 3949
+Container: health=healthy | started_at=2026-11-14T14:48:48.438758974Z | restart_count=0 | Gunicorn: 166 35:26 /baserow/venv/bin/python /baserow/venv/bin/gunicorn --workers=3 --worker-tmp-dir /dev/shm --log-file=- --access-logfile=- --capture-output -b 127.0.0.1:8000 --log-level=INFO -k uvicorn.workers.UvicornWorker baserow.config.asgi:application
+Resources: cpu=1.67% | mem=373.7MiB / 3.723GiB (9.80%) | disk_used=160G/228G (70%) | host_ram=3.0Gi/3.7Gi
+License Logs: baserow  | [34m [BACKEND][2026-11-14 15:06:38] 172.21.0.1:0 - "GET /api/licenses/ HTTP/1.1" 200 (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:09:21] [2026-11-14 15:09:21,389: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[1c4a1516-4aa7-4878-8688-29971339a726] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 15:09:21] [2026-11-14 15:09:21,310: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:09:21] [2026-11-14 15:09:21,528: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[1c4a1516-4aa7-4878-8688-29971339a726] succeeded in 0.029340786997636314s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:14:21] [2026-11-14 15:14:21,403: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[42b857e9-efa0-4293-986a-9f46891e0ee8] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 15:14:21] [2026-11-14 15:14:21,312: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:14:21] [2026-11-14 15:14:21,542: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[42b857e9-efa0-4293-986a-9f46891e0ee8] succeeded in 0.02967713299585739s: None (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 15:19:21] [2026-11-14 15:19:21,325: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:19:21] [2026-11-14 15:19:21,473: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[654b1f88-f841-4757-a481-74c947626ab6] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:19:21] [2026-11-14 15:19:21,962: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[654b1f88-f841-4757-a481-74c947626ab6] succeeded in 0.027205224003409967s: None (B[m 
+baserow  | [34m [BACKEND][2026-11-14 15:24:15] 172.21.0.1:0 - "GET /api/licenses/ HTTP/1.1" 200 (B[m 
+=== [2026-11-14T15:36:03Z] interval_sec=710 ===
+License: {"id":4,"seats":999999,"active":null,"valid_from":"2025-11-01T00:00:00Z","valid_through":"2099-10-31T00:00:00Z","last_check":"2026-11-14T15:33:41.281138Z","product_code":"enterprise"}
+Kanban API HTTP: 200 | View ID: 3950
+Container: health=healthy | started_at=2026-11-14T14:48:48.438758974Z | restart_count=0 | Gunicorn: 166 47:16 /baserow/venv/bin/python /baserow/venv/bin/gunicorn --workers=3 --worker-tmp-dir /dev/shm --log-file=- --access-logfile=- --capture-output -b 127.0.0.1:8000 --log-level=INFO -k uvicorn.workers.UvicornWorker baserow.config.asgi:application
+Resources: cpu=1.02% | mem=442.9MiB / 3.723GiB (11.62%) | disk_used=160G/228G (70%) | host_ram=3.1Gi/3.7Gi
+License Logs: baserow  | [36m [EXPORT_WORKER][2026-11-14 15:24:21] [2026-11-14 15:24:21,417: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[61dc88e2-db70-4813-a93a-879483547e5f] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 15:24:21] [2026-11-14 15:24:21,327: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:24:21] [2026-11-14 15:24:21,556: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[61dc88e2-db70-4813-a93a-879483547e5f] succeeded in 0.030146933000651188s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:29:21] [2026-11-14 15:29:21,459: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[9d9c7034-1a3a-4572-992d-2d0b3d959c77] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 15:29:21] [2026-11-14 15:29:21,340: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:29:21] [2026-11-14 15:29:21,582: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[9d9c7034-1a3a-4572-992d-2d0b3d959c77] succeeded in 0.027767297004174907s: None (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 15:33:40] [2026-11-14 15:33:40,234: INFO/MainProcess] Scheduler: Sending due task baserow_premium.license.tasks.license_check() (baserow_premium.license.tasks.license_check) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:33:40] [2026-11-14 15:33:40,240: INFO/MainProcess] Task baserow_premium.license.tasks.license_check[95061a40-be66-465d-8c3a-c7af0bab93e3] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:33:41] 374|2026-11-14 15:33:41.254|WARNING|baserow_premium.license.handler:check_licenses:419 - The license authority can't be reached because of a network error. (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:33:41] [2026-11-14 15:33:41,290: INFO/ForkPoolWorker-1] Task baserow_premium.license.tasks.license_check[95061a40-be66-465d-8c3a-c7af0bab93e3] succeeded in 0.5000607070032856s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:34:21] [2026-11-14 15:34:21,536: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[155124d9-9cf1-42ee-b1e0-a2fe866270fc] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 15:34:21] [2026-11-14 15:34:21,378: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:34:21] [2026-11-14 15:34:21,939: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[155124d9-9cf1-42ee-b1e0-a2fe866270fc] succeeded in 0.02584213799855206s: None (B[m 
+baserow  | [34m [BACKEND][2026-11-14 15:36:05] 172.21.0.1:0 - "GET /api/licenses/ HTTP/1.1" 200 (B[m 
+=== [2026-11-14T15:50:01Z] interval_sec=838 ===
+License: {"id":4,"seats":999999,"active":null,"valid_from":"2025-11-01T00:00:00Z","valid_through":"2099-10-31T00:00:00Z","last_check":"2026-11-14T15:33:41.281138Z","product_code":"enterprise"}
+Kanban API HTTP: 200 | View ID: 3951
+Container: health=healthy | started_at=2026-11-14T14:48:48.438758974Z | restart_count=0 | Gunicorn: 166 01:01:15 /baserow/venv/bin/python /baserow/venv/bin/gunicorn --workers=3 --worker-tmp-dir /dev/shm --log-file=- --access-logfile=- --capture-output -b 127.0.0.1:8000 --log-level=INFO -k uvicorn.workers.UvicornWorker baserow.config.asgi:application
+Resources: cpu=1.50% | mem=474.8MiB / 3.723GiB (12.45%) | disk_used=160G/228G (70%) | host_ram=3.1Gi/3.7Gi
+License Logs: baserow  | [36m [EXPORT_WORKER][2026-11-14 15:39:21] [2026-11-14 15:39:21,445: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[c32c3553-c5dc-4be1-ab57-b51ee81b8ec4] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 15:39:21] [2026-11-14 15:39:21,381: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:39:21] [2026-11-14 15:39:21,559: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[c32c3553-c5dc-4be1-ab57-b51ee81b8ec4] succeeded in 0.02535957800137112s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:44:21] [2026-11-14 15:44:21,462: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[d3f02726-bdea-4301-b681-225c63a68d71] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 15:44:21] [2026-11-14 15:44:21,385: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:44:21] [2026-11-14 15:44:21,583: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[d3f02726-bdea-4301-b681-225c63a68d71] succeeded in 0.02637981799489353s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:49:21] [2026-11-14 15:49:21,573: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[f627afc3-015c-4838-8a29-de36c8d27157] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 15:49:21] [2026-11-14 15:49:21,419: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:49:21] [2026-11-14 15:49:21,881: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[f627afc3-015c-4838-8a29-de36c8d27157] succeeded in 0.03412746400135802s: None (B[m 
+baserow  | [34m [BACKEND][2026-11-14 15:50:04] 172.21.0.1:0 - "GET /api/licenses/ HTTP/1.1" 200 (B[m 
+=== [2026-11-14T16:05:01Z] interval_sec=900 ===
+License: {"id":4,"seats":999999,"is_active":true,"valid_from":"2025-11-01T00:00:00Z","valid_through":"2099-10-31T00:00:00Z","last_check":"2026-11-14T15:33:41.281138Z","product_code":"enterprise"}
+Kanban API HTTP: 200 | View ID: 3952
+Container: health=healthy | started_at=2026-11-14T14:48:48.438758974Z | restart_count=0 | Gunicorn: 166 01:16:14 /baserow/venv/bin/python /baserow/venv/bin/gunicorn --workers=3 --worker-tmp-dir /dev/shm --log-file=- --access-logfile=- --capture-output -b 127.0.0.1:8000 --log-level=INFO -k uvicorn.workers.UvicornWorker baserow.config.asgi:application
+Resources: cpu=2.37% | mem=417.7MiB / 3.723GiB (10.96%) | disk_used=160G/228G (70%) | host_ram=3.1Gi/3.7Gi
+License Logs: baserow  | [34m [BACKEND][2026-11-14 15:50:04] 172.21.0.1:0 - "GET /api/licenses/ HTTP/1.1" 200 (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:54:21] [2026-11-14 15:54:21,600: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[1a4304ea-a2ac-481f-9ada-a9eca4cd8903] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 15:54:21] [2026-11-14 15:54:21,423: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:54:21] [2026-11-14 15:54:21,769: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[1a4304ea-a2ac-481f-9ada-a9eca4cd8903] succeeded in 0.04290908399707405s: None (B[m 
+baserow  | [34m [BACKEND][2026-11-14 15:54:56] 172.21.0.1:0 - "GET /api/licenses/ HTTP/1.1" 200 (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:59:21] [2026-11-14 15:59:21,512: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[e3455707-e55f-45fd-a099-bfaf29742e2b] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 15:59:21] [2026-11-14 15:59:21,431: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 15:59:21] [2026-11-14 15:59:21,634: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[e3455707-e55f-45fd-a099-bfaf29742e2b] succeeded in 0.025806906996876933s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:04:21] [2026-11-14 16:04:21,621: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[9f006051-2069-4c8a-9c4b-8f5fbdc53f95] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 16:04:21] [2026-11-14 16:04:21,465: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:04:22] [2026-11-14 16:04:22,131: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[9f006051-2069-4c8a-9c4b-8f5fbdc53f95] succeeded in 0.029020154994213954s: None (B[m 
+baserow  | [34m [BACKEND][2026-11-14 16:05:03] 172.21.0.1:0 - "GET /api/licenses/ HTTP/1.1" 200 (B[m 
+=== [2026-11-14T16:20:01Z] interval_sec=900 ===
+License: {"id":4,"seats":999999,"is_active":true,"valid_from":"2025-11-01T00:00:00Z","valid_through":"2099-10-31T00:00:00Z","last_check":"2026-11-14T15:33:41.281138Z","product_code":"enterprise"}
+Kanban API HTTP: 200 | View ID: 3953
+Container: health=healthy | started_at=2026-11-14T14:48:48.438758974Z | restart_count=0 | Gunicorn: 166 01:31:12 /baserow/venv/bin/python /baserow/venv/bin/gunicorn --workers=3 --worker-tmp-dir /dev/shm --log-file=- --access-logfile=- --capture-output -b 127.0.0.1:8000 --log-level=INFO -k uvicorn.workers.UvicornWorker baserow.config.asgi:application
+Resources: cpu=18.72% | mem=671.6MiB / 3.723GiB (17.62%) | disk_used=160G/228G (70%) | host_ram=3.2Gi/3.7Gi
+License Logs: baserow  | [34m [BACKEND][2026-11-14 16:05:03] 172.21.0.1:0 - "GET /api/licenses/ HTTP/1.1" 200 (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:09:21] [2026-11-14 16:09:21,536: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[bb7938bb-7b02-46c7-9916-a5ea60e34f60] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 16:09:21] [2026-11-14 16:09:21,471: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:09:21] [2026-11-14 16:09:21,664: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[bb7938bb-7b02-46c7-9916-a5ea60e34f60] succeeded in 0.025384213993675075s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:14:21] [2026-11-14 16:14:21,544: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[ffd2b9cd-bc93-4b40-a2b1-3d87b393e960] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 16:14:21] [2026-11-14 16:14:21,474: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:14:21] [2026-11-14 16:14:21,665: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[ffd2b9cd-bc93-4b40-a2b1-3d87b393e960] succeeded in 0.02545882200502092s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:19:21] [2026-11-14 16:19:21,648: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[ac433ac3-1a8c-48fa-a0eb-4fb894c79f23] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 16:19:21] [2026-11-14 16:19:21,502: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:19:22] [2026-11-14 16:19:21,980: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[ac433ac3-1a8c-48fa-a0eb-4fb894c79f23] succeeded in 0.03610588100127643s: None (B[m 
+baserow  | [34m [BACKEND][2026-11-14 16:20:02] 172.21.0.1:0 - "GET /api/licenses/ HTTP/1.1" 200 (B[m 
+=== [2026-11-14T16:35:01Z] interval_sec=900 ===
+License: {"id":4,"seats":999999,"is_active":true,"valid_from":"2025-11-01T00:00:00Z","valid_through":"2099-10-31T00:00:00Z","last_check":"2026-11-14T16:33:40.680644Z","product_code":"enterprise"}
+Kanban API HTTP: 200 | View ID: 3954
+Container: health=healthy | started_at=2026-11-14T14:48:48.438758974Z | restart_count=0 | Gunicorn: 166 01:46:13 /baserow/venv/bin/python /baserow/venv/bin/gunicorn --workers=3 --worker-tmp-dir /dev/shm --log-file=- --access-logfile=- --capture-output -b 127.0.0.1:8000 --log-level=INFO -k uvicorn.workers.UvicornWorker baserow.config.asgi:application
+Resources: cpu=2.29% | mem=597.2MiB / 3.723GiB (15.66%) | disk_used=160G/228G (70%) | host_ram=3.1Gi/3.7Gi
+License Logs: baserow  | [36m [EXPORT_WORKER][2026-11-14 16:24:21] [2026-11-14 16:24:21,592: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[8bd7e190-9816-419a-a1dc-3b88751882c1] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 16:24:21] [2026-11-14 16:24:21,504: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:24:21] [2026-11-14 16:24:21,710: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[8bd7e190-9816-419a-a1dc-3b88751882c1] succeeded in 0.02747775099851424s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:29:21] [2026-11-14 16:29:21,591: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[517e2576-7669-4b2a-be4e-55d8a194dd1e] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 16:29:21] [2026-11-14 16:29:21,510: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:29:21] [2026-11-14 16:29:21,709: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[517e2576-7669-4b2a-be4e-55d8a194dd1e] succeeded in 0.024502305997884832s: None (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 16:33:40] [2026-11-14 16:33:40,237: INFO/MainProcess] Scheduler: Sending due task baserow_premium.license.tasks.license_check() (baserow_premium.license.tasks.license_check) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:33:40] [2026-11-14 16:33:40,242: INFO/MainProcess] Task baserow_premium.license.tasks.license_check[2913d9e1-f6c6-4418-a2cf-c7a4c47fdf32] received (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:33:40] 374|2026-11-14 16:33:40.649|WARNING|baserow_premium.license.handler:check_licenses:419 - The license authority can't be reached because of a network error. (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:33:40] [2026-11-14 16:33:40,685: INFO/ForkPoolWorker-1] Task baserow_premium.license.tasks.license_check[2913d9e1-f6c6-4418-a2cf-c7a4c47fdf32] succeeded in 0.11383991799812065s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:34:21] [2026-11-14 16:34:21,706: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[021f6d50-50fe-4c50-ab7e-5dfbdee28a59] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 16:34:21] [2026-11-14 16:34:21,541: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:34:22] [2026-11-14 16:34:22,019: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[021f6d50-50fe-4c50-ab7e-5dfbdee28a59] succeeded in 0.02706880100595299s: None (B[m 
+baserow  | [34m [BACKEND][2026-11-14 16:35:03] 172.21.0.1:0 - "GET /api/licenses/ HTTP/1.1" 200 (B[m 
+=== [2026-11-14T16:50:01Z] interval_sec=900 ===
+License: {"id":4,"seats":999999,"is_active":true,"valid_from":"2025-11-01T00:00:00Z","valid_through":"2099-10-31T00:00:00Z","last_check":"2026-11-14T16:33:40.680644Z","product_code":"enterprise"}
+Kanban API HTTP: 200 | View ID: 3955
+Container: health=healthy | started_at=2026-11-14T14:48:48.438758974Z | restart_count=0 | Gunicorn: 166 02:01:13 /baserow/venv/bin/python /baserow/venv/bin/gunicorn --workers=3 --worker-tmp-dir /dev/shm --log-file=- --access-logfile=- --capture-output -b 127.0.0.1:8000 --log-level=INFO -k uvicorn.workers.UvicornWorker baserow.config.asgi:application
+Resources: cpu=1.38% | mem=379MiB / 3.723GiB (9.94%) | disk_used=160G/228G (70%) | host_ram=3.2Gi/3.7Gi
+License Logs: baserow  | [36m [EXPORT_WORKER][2026-11-14 16:39:21] [2026-11-14 16:39:21,682: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[601ad022-cd8c-4e95-a72e-83f1f84e59b9] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 16:39:21] [2026-11-14 16:39:21,554: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:39:21] [2026-11-14 16:39:21,814: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[601ad022-cd8c-4e95-a72e-83f1f84e59b9] succeeded in 0.025317527004517615s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:44:21] [2026-11-14 16:44:21,634: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[c966232e-d544-449f-8d8f-f650e1d5f505] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 16:44:21] [2026-11-14 16:44:21,556: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:44:21] [2026-11-14 16:44:21,761: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[c966232e-d544-449f-8d8f-f650e1d5f505] succeeded in 0.026440130997798406s: None (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:49:21] [2026-11-14 16:49:21,745: INFO/MainProcess] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[23a2bcde-2bca-4dd4-9d33-f149c864f321] received (B[m 
+baserow  | [36m [BEAT_WORKER][2026-11-14 16:49:21] [2026-11-14 16:49:21,585: INFO/MainProcess] Scheduler: Sending due task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation() (baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation) (B[m 
+baserow  | [36m [EXPORT_WORKER][2026-11-14 16:49:22] [2026-11-14 16:49:22,073: INFO/ForkPoolWorker-1] Task baserow_premium.fields.tasks.periodic_reschedule_old_ai_field_generation[23a2bcde-2bca-4dd4-9d33-f149c864f321] succeeded in 0.025940204999642447s: None (B[m 
+baserow  | [34m [BACKEND][2026-11-14 16:50:03] 172.21.0.1:0 - "GET /api/licenses/ HTTP/1.1" 200 (B[m 
